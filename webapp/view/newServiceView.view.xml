@@ -1,0 +1,463 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Showroom.CarShowroom.controller.newServiceView"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" displayBlock="true" xmlns:f="sap.ui.layout.form" xmlns:tnt="sap.tnt"
+	xmlns:r="sap.suite.ui.commons" xmlns:viz.data="sap.viz.ui5.data" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout">
+	<tnt:ToolHeader >
+		<Image id="abc22" src="./Img/logo1.png" class="logoimage"/>
+		<ToolbarSpacer/>
+		<Text text="SHOWROOM NAME"/>
+		<ToolbarSpacer/>
+		<Button type="Reject" tooltip="LogOut" icon="sap-icon://log" press="logOut"/>
+	</tnt:ToolHeader>
+	<VBox enableScrolling="false">
+		<HBox class="sapUiMediumMarginBeginEnd VBox">
+			<GenericTile class="sapUiMediumMarginBeginEnd sapUiSmallMarginBottom sapUiSmallMarginTop" header="Dash Board" subheader="" press="handleNav"
+				backgroundImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNabW499LkB47qkeHPVgDomCBgJzMsLxeBpLg81vbDZxcbeo7f3A">
+				<TileContent footer=" ">
+					<!--<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>-->
+					<NewsContent contentText="DASH-BOARD"/>
+				</TileContent>
+				<customData>
+					<core:CustomData key="target" value="p1"/>
+				</customData>
+			</GenericTile>
+			<GenericTile class="sapUiMediumMarginBeginEnd sapUiSmallMarginBottom sapUiSmallMarginTop" header=" " subheader="" press="handleNav"
+				backgroundImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCUYgc_ajfQId-enrU8TiwBll7hh03TYJBGT_CAk3uby9SLZou_Q">
+				<TileContent>
+					<NewsContent contentText="SERVICE-DETAILS"/>
+					<!--<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>-->
+				</TileContent>
+				<customData>
+					<core:CustomData key="target" value="p2"/>
+				</customData>
+			</GenericTile>
+			<GenericTile class="sapUiMediumMarginBeginEnd sapUiSmallMarginBottom sapUiSmallMarginTop" header=" " subheader=" " press="handleNav"
+				backgroundImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeGWnZFZUWcBFAxOe8EVZ5fg2t3Y5UGVX2fgrKYma1LUjhx4oR">
+				<TileContent>
+					<NewsContent contentText="PARTS-AVAILABLE"/>
+					<!--<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>-->
+				</TileContent>
+				<customData>
+					<core:CustomData key="target" value="p3"/>
+				</customData>
+			</GenericTile>
+			<GenericTile class="sapUiMediumMarginBeginEnd sapUiSmallMarginBottom sapUiSmallMarginTop" header=" " subheader=" " press="handleNav"
+				backgroundImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfmSaHclRv0EZ_asS891w4jouseYc2v10OymjXwKsDPq7vIf0t">
+				<TileContent>
+					<NewsContent contentText="BILLING"/>
+					<!--<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>-->
+				</TileContent>
+				<customData>
+					<core:CustomData key="target" value="p4"/>
+				</customData>
+			</GenericTile>
+			<GenericTile class="sapUiMediumMarginBegin sapUiSmallMarginBottom sapUiSmallMarginTop" header=" " subheader=" " press="handleNav"
+				backgroundImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXf90OuoCu7vUiRUALiCFct80KKE1ZCI--SjN3CMeaVWmWaRVRcQ">
+				<TileContent>
+					<NewsContent contentText="TRANSACTION-DETAILS"/>
+					<!--<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>-->
+				</TileContent>
+				<customData>
+					<core:CustomData key="target" value="p5"/>
+				</customData>
+			</GenericTile>
+			<!--<Button  class="sapUiMediumMarginBeginEnd sapUiTinyMarginTop tileLayout" type="Reject" tooltip="LogOut" icon="sap-icon://log" press="logOut"/>-->
+		</HBox>
+		<HBox visible="false">
+			<Button text="Back" type="Back" press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1"/>
+				</layoutData>
+			</Button>
+			<Select id="animationSelect">
+				<core:Item text="Slide animation" key="slide"/>
+				<core:Item text="Fade animation" key="fade"/>
+				<core:Item text="Flip animation" key="flip"/>
+				<core:Item text="Show animation" key="show"/>
+				<layoutData>
+					<FlexItemData growFactor="1"/>
+				</layoutData>
+			</Select>
+		</HBox>
+		<NavContainer id="navCon" width="100%" height="33em" class="navContainerControl sapUiSmallMarginBottom" enableScrolling="false">
+			<Page id="p1" title="Dash Board" floatingFooter="true" showHeader="false" enableScrolling="false">
+				<l:BlockLayout id="BlockLayoutTwo">
+					<l:BlockLayoutRow>
+						<l:BlockLayoutCell id="cell-1" title="SERVICE DONE" backgroundColorSet="ColorSet5" backgroundColorShade="ShadeA" titleAlignment="Center">
+							<Text text=""/>
+						</l:BlockLayoutCell>
+						<l:BlockLayoutCell id="cell-2" title="PART SOLD-OUT" backgroundColorSet="ColorSet5" backgroundColorShade="ShadeB" titleAlignment="Center">
+							<core:Icon src=" "/>
+						</l:BlockLayoutCell>
+						<l:BlockLayoutCell id="cell-3" title="ALL TRANSACTION" backgroundColorSet="ColorSet5" backgroundColorShade="ShadeC" titleAlignment="Center">
+							<core:Icon src=" "/>
+						</l:BlockLayoutCell>
+					</l:BlockLayoutRow>
+					<l:BlockLayoutRow>
+						<l:BlockLayoutCell id="cell-4" title=" " backgroundColorSet="ColorSet11" backgroundColorShade="ShadeD" titleAlignment="Center">
+							<viz:VizFrame id="idVizFrame1" height="320px" width="400px" class="sapUiHugeMarginEnda" vizType='column' vizProperties="{title:{visible:false}}">
+								<viz:dataset>
+									<viz.data:FlattenedDataset id="idGraph1" data="{myModel>/ServiceDone}">
+										<viz.data:dimensions>
+											<viz.data:DimensionDefinition name="year" value="{myModel>year}"/>
+										</viz.data:dimensions>
+										<viz.data:measures>
+											<viz.data:MeasureDefinition name="Servive Done" value="{myModel>No: Of servive}"/>
+										</viz.data:measures>
+									</viz.data:FlattenedDataset>
+								</viz:dataset>
+								<viz:feeds>
+									<viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure" values="Servive Done"/>
+									<viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension" values="year"/>
+								</viz:feeds>
+							</viz:VizFrame>
+							<ToolbarSpacer/>
+						</l:BlockLayoutCell>
+						<l:BlockLayoutCell id="cell-5" title=" "  backgroundColorSet="ColorSet11" backgroundColorShade="ShadeC" titleAlignment="Center">
+							<!--<core:Icon src=" "/>-->
+							<viz:VizFrame id="idVizFrame2" height="320px" class="sapUiHugeMarginEnda" width="400px" vizType='pie' vizProperties="{title:{visible:false}}">
+								<viz:dataset>
+									<viz.data:FlattenedDataset id="idGraph2" data="{myModel>/ProductSold}">
+										<viz.data:dimensions>
+											<viz.data:DimensionDefinition name="year" value="{myModel>year}"/>
+										</viz.data:dimensions>
+										<viz.data:measures>
+											<viz.data:MeasureDefinition name="Product Sold" value="{myModel>SoldOut}"/>
+										</viz.data:measures>
+									</viz.data:FlattenedDataset>
+								</viz:dataset>
+								<viz:feeds>
+									<viz.feeds:FeedItem uid="size"  type="Measure" values="Product Sold"/>
+									<viz.feeds:FeedItem uid="color" type="Dimension" values="year"/>
+								</viz:feeds>
+							</viz:VizFrame>
+						</l:BlockLayoutCell>
+						<l:BlockLayoutCell id="cell-6" title=" " backgroundColorSet="ColorSet11" backgroundColorShade="ShadeD" titleAlignment="Center">
+							<!--<core:Icon src=" "/>-->
+							<viz:VizFrame id="idVizFrame3" height="320px" width="400px" class="sapUiHugeMarginEnda" vizType='line' vizProperties="{title:{visible:false}}">
+								<viz:dataset>
+									<viz.data:FlattenedDataset id="idGraph3" data="{myModel>/AllTransaction}">
+										<viz.data:dimensions>
+											<viz.data:DimensionDefinition name="year" value="{myModel>year}"/>
+										</viz.data:dimensions>
+										<viz.data:measures>
+											<viz.data:MeasureDefinition name="Profit" value="{myModel>Profit}"/>
+										</viz.data:measures>
+									</viz.data:FlattenedDataset>
+								</viz:dataset>
+								<viz:feeds>
+									<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Profit"/>
+									<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="year"/>
+								</viz:feeds>
+							</viz:VizFrame>
+						</l:BlockLayoutCell>
+					</l:BlockLayoutRow>
+				</l:BlockLayout>
+				<!--<footer>-->
+				<!--	<Toolbar>-->
+				<!--		<ToolbarSpacer/>-->
+				<!--		<Button type="Ghost" text="Dash Board"/>-->
+				<!--	</Toolbar>-->
+				<!--</footer>-->
+			</Page>
+			<Page id="p2" title="Service Details" floatingFooter="true" showHeader="false" enableScrolling="false">
+				<SplitContainer>
+				<masterPages >
+					<Page title="Master" backgroundDesign="Solid" showHeader="false" enableScrolling="true" floatingFooter="true">
+						<SearchField liveChange="onCustomerSearch" ></SearchField>
+						<List id="idCustomerdetails" items="{path:'myModel>/CustomerServiceDetails',sorter:{path : 'Name'}}" itemPress="item" mode="Delete" delete="onDelete" updateFinished="Updated"
+							includeItemInSelection="true" press="" >
+							<items>
+								<ObjectListItem title="{myModel>Name}"  type="Active"  selected="true" >
+									<attributes>
+										<ObjectAttribute text="Car No:{myModel>CarNumber}"  />
+										<ObjectAttribute text="Issue:{myModel>Issue}"  />
+									</attributes>
+								</ObjectListItem>
+							</items>
+						</List>
+						<footer>
+							<Bar>
+								<contentRight>
+									<Button xmlns="sap.m" text="New Customer?" id="addemp" value="p1" icon="sap-icon://add" press="addCustomer" tooltip="Add New Customer details here	"/>
+								</contentRight>
+							</Bar>
+						</footer>
+					</Page>
+				</masterPages>
+				<detailPages>
+					<Page title="Detail" backgroundDesign="Solid" showHeader="false" enableScrolling="true" floatingFooter="true">
+					<VBox class="sapUiSmallMargin">
+					<f:SimpleForm editable="true" columnsM="2" columnsL="2" columnsXL="2">
+						<f:content>
+							<core:Title text="Customer Info."/>
+							<Label text="Name"/>
+							<Input placeholder="Name" editable="{jmodel>/editable}" value="{myModel>/Panel/Name}" />
+							<Label text="Email"/>
+							<Input placeholder="Email" editable="{jmodel>/editable}" value="{myModel>/Panel/Email}" />
+							<Label text="Mobile No"/>
+							<Input placeholder="Mobile No." editable="{jmodel>/editable}" value="{myModel>/Panel/MobileNo}" />
+							<Label text="Car Model"/>
+							<Input placeholder="Car Model" editable="{jmodel>/editable}" value="{myModel>/Panel/CarModel}" />
+							<Label text="Car No."/>
+							<Input placeholder="Car No." editable="{jmodel>/editable}" value="{myModel>/Panel/CarNumber}" />
+							<Label text="Date"/>
+							<DatePicker placeholder="Enter Date" change="handleChange" editable="{jmodel>/editable}" value="{myModel>/Panel/Date}"/>
+							<core:Title text="Service Details"/>
+							<Label text="Issue"/>
+							<Input placeholder="Issue" editable="{jmodel>/editable}" value="{myModel>/Panel/Issue}" />
+							<Label text="Parts Replaced"/>
+							<MultiInput id="multiInput" placeholder="Parts Replaced" showValueHelp="true" editable="{jmodel>/editable}" value="{myModel>/Panel/PartsReplaced}" />
+						</f:content>
+					</f:SimpleForm>
+			    	</VBox>
+							<footer>
+								<Bar>
+								<contentRight>
+										<Button xmlns="sap.m" type="Ghost" text="Edit" id="editBtn" icon="sap-icon://action" press="Edit" tooltip="edit"/>
+									    <Button xmlns="sap.m" type="Accept" text="Save" id="savebtn" visible="false" tooltip="Save" press="Save" icon="sap-icon://save" class="sapUiSmallMarginEnd"/>
+								     	<Button xmlns="sap.m" type="Reject" text="Cancel" id="cancelbtn" visible="false" icon="sap-icon://cancel" press="Cancel" tooltip="Cancel"/>
+								</contentRight>
+							</Bar>
+						</footer>
+					</Page>
+				</detailPages>
+			</SplitContainer>
+				<!--<footer>-->
+				<!--	<Bar class="sapUiStdFooter">-->
+				<!--		<contentRight>-->
+				<!--			<Button xmlns="sap.m" type="Reject" text="CANCEL" id="addemp" icon="sap-icon://sys-cancel" tooltip="Camcel the item"/>-->
+				<!--			<Button xmlns="sap.m" type="Accept" text="SAVE" id="addemp1" icon="sap-icon://save" tooltip="Camcel the item"/>-->
+				<!--		</contentRight>-->
+				<!--	</Bar>-->
+				<!--</footer>-->
+			</Page>
+			<!--<Page id="p2a" title="Service Details" floatingFooter="true" showHeader="false">-->
+				
+			<!--</Page>-->
+			<Page id="p3" title="Parts Available" floatingFooter="true" showHeader="false">
+				<Toolbar>
+					<ToolbarSpacer/>
+					<SearchField liveChange="onSearch" placeholder="Enter the item name here.." id="IdSearch" width="30%"/>
+				</Toolbar>
+				<content>
+					<List id="idInvenlist" items="{ path:'myModel>/Parts' }" itemPress="pdetails" mode="MultiSelect">
+						<items>
+							<ObjectListItem type="Navigation" title="{myModel>PartsName}" icon="" id="listItem" selected="false" number="{myModel>Price}"
+								numberUnit="Color:{myModel>AvailableColours/0/Color1}"/>
+						</items>
+					</List>
+				</content>
+				<footer>
+					<Bar class="sapUiStdFooter">
+						<contentRight>
+							<Button xmlns="sap.m" type="Accept" text="BOOK" id="addemp5" icon="sap-icon://add" tooltip="Book the item"/>
+							<!--<Button xmlns="sap.m" class="sapUiSmallMarginBottom"  press="" text=""-->
+							<!--	 />-->
+							<Button class="sapUiSmallMarginBottom" type="Ghost" text="CHECK PRODUCTION" press="oProduction"
+								tooltip="CLICK HERE IF THE ITEM ISN'T AVAILABLE IN INVENTORY" icon="sap-icon://check-availability">
+								<customData>
+									<core:CustomData key="multi" value="true"/>
+								</customData>
+							</Button>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+			<Page id="p4" title="Billing" floatingFooter="true" showHeader="false">
+				<content>
+					<!--<Toolbar>-->
+					<!--	<Text text="Showroom name"/>-->
+					<!--	<ToolbarSpacer/>-->
+					<!--	<Image src="./Img/logo1.png" class="logoimage"/>-->
+					<!--	<ToolbarSpacer/>-->
+					<!--	<Text text="INVOICE"/>-->
+					<!--</Toolbar>-->
+					<ToolbarSpacer/>
+					<Toolbar>
+						<Label text="Date:" labelFor="DP1"/>
+						<DatePicker id="idB1" placeholder="Enter Date" change="handleChange" width="15%"/>
+						<ToolbarSpacer/>
+						<Label text="Invoice#:"/>
+						<Input placeholder="invoice No:" value="" id="idB2" width="15%"/>
+					</Toolbar>
+					<VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="SimpleFormDisplayColumn_oneGroup234" editable="true" columnsM="2" columnsL="2" columnsXL="2">
+							<f:content>
+								<core:Title text="Customer Info."/>
+								<Label text="Name"/>
+								<Input  placeholder="Name" id="idB3" value=""/>
+								<Label text="Address"/>
+								<TextArea placeholder="Address" id="idB4" value=""/>
+								<core:Title text="Vehicle Info."/>
+								<Label text="Model"/>
+								<Input placeholder="model" id="idB5" value=""/>
+								<Label text="Year"/>
+								<Input placeholder="Year" id="idB6" value=""/>
+								<Label text="Status"/>
+								<Input value="" id="idB7" placeholder="Status"/>
+								<!--<Label text="Milage"/>-->
+								<!--<Input value="" id="idB8" placeholder="Milage"/>-->
+							</f:content>
+						</f:SimpleForm>
+					</VBox>
+					<Table items="" id="table" growing="true" growingThreshold="50" class="sapUiSmallMargin">
+						<columns>
+							<Column >
+								<Text text="Job Performed" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="HOURS" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="RATE" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="AMOUNT" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem >
+								<cells>
+									<TextArea value="" placeholder="" id="idB9"/>
+								</cells>
+								<cells>
+									<TextArea value="" placeholder="" id="idB10"/>
+								</cells>
+								<cells>
+									<TextArea value="" placeholder="" id="idB11" />
+								</cells>
+								<cells>
+									<TextArea value="" placeholder="" id="idB12" />
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Label text="Sub Total:"/>
+						<Input value="" width="20%" id="idB13" />
+					</Toolbar>
+					<Table items="" id="table1" growing="true" growingThreshold="50" class="sapUiSmallMargin">
+						<columns>
+							<Column >
+								<Text text="PART NAME" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="QTY" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="UNIT PRICE" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="AMOUNT" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem >
+								<cells>
+									<TextArea value="" placeholder="" id="idB14" />
+								</cells>
+								<cells>
+									<TextArea value="" placeholder="" id="idB15" />
+								</cells>
+								<cells>
+									<TextArea value="" placeholder="" id="idB16" />
+								</cells>
+								<cells>
+									<TextArea value="" placeholder="" id="idB17" />
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Label text="Sub Total:"/>
+						<Input value="" width="20%" id="idB18" />
+					</Toolbar>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Label text="GRAND TOTAL:"/>
+						<Input value="" width="30%" id="idB19" />
+					</Toolbar>
+					<Toolbar>
+						<Label text="Sign. of Service Manager"/>
+						<ToolbarSpacer/>
+						<Label text="Seal"/>
+						<ToolbarSpacer/>
+						<Label text="Customer Sign."/>
+					</Toolbar>
+				</content>
+				<footer>
+					<Bar class="sapUiStdFooter">
+						<contentRight>
+							<Button xmlns="sap.m" type="Reject" text="Clear Fields" icon="sap-icon://cancel" press="onClear" tooltip="Clear Fields"/>
+							<!--<Button xmlns="sap.m" type="Ghost" text="Print" icon="sap-icon://print" press="addEmployee" tooltip="Print"/>-->
+							<Button xmlns="sap.m" type="Accept" text="Download" icon="sap-icon://download" press="oBill" tooltip="Download"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+			<Page id="p5" title="Transaction Details" floatingFooter="true">
+				<headerContent>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<ComboBox items="" value="---------2018--------">
+							<core:Item key="" text="2018"/>
+							<!--<core:Item key="" text="2017"/>-->
+							<!--<core:Item key="" text="2016"/>-->
+							<!--<core:Item key="" text="2015"/>-->
+						</ComboBox>
+					</Toolbar>
+				</headerContent>
+				<content>
+					<VBox fitContainer="true">
+						<Table items="{myModel>/ServiceTransaction}" growing="true" inset="false" growingThreshold="50"
+						alternateRowColors="true" showOverlay="false" mode="SingleSelectMaster" sticky="ColumnHeaders" >
+							<columns>
+								<Column hAlign="Center" >
+									<Text text="MONTH" class="sapUiLargeMarginBeginEnd"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" vAlign="Middle" hAlign="Center">
+									<Text text="NO: OF SERVICE DONE" class="sapUiLargeMarginBeginEnd"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" vAlign="Middle" hAlign="Center">
+									<Text text="AMT. OF SERVICE DONE" class="sapUiLargeMarginBeginEnd"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" vAlign="Middle" hAlign="Center">
+									<Text text="NO: OF PARTS SOLD OUT" class="sapUiLargeMarginBeginEnd"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" vAlign="Middle" hAlign="Center">
+									<Text text="AMT. OF PARTS SOLD OUT" class="sapUiLargeMarginBeginEnd"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" vAlign="Middle" hAlign="Center">
+									<Text text="TOTAL AMOUNT" class="sapUiLargeMarginBeginEnd"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem vAlign="Middle" >
+									<cells>
+										<Text text="{myModel>Month}" class="sapUiTinyMargin"/>
+										<Text text="{myModel>No.OfService}" class="sapUiTinyeMargin"/>
+										<Text text="{myModel>Amnt.OfService}" class="sapUiTinyMargin"/>
+										<Text text="{myModel>No.OfPartsSold}" class="sapUiTinyMargin"/>
+										<Text text="{myModel>Amnt.OfPartsSold}" class="sapUiTinyMargin"/>
+										<Text text="{myModel>TotalAmnt}" class="sapUiTinyMargin"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</VBox>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button type="Accept" icon="sap-icon://download" tooltip="Dowload the list" press="onExport" />
+						<Button type="Ghost" text="Graphical view" press="onOpenGraph" />
+					</Toolbar>
+				</footer>
+			</Page>
+		</NavContainer>
+	</VBox>
+	<!--</Pages>-->
+</mvc:View>

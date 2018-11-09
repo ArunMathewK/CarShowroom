@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog noDataText="No Products Found" title="Select Product" search="handleSearch" confirm="handleClose" cancel="handleClose"
+		items="{ path:'myModel>/Production' }" id="list">
+		<items>
+			<ObjectListItem title="{myModel>CarName}" icon="{myModel>image}" type="Active"></ObjectListItem>
+		</items>
+	</SelectDialog>
+</core:FragmentDefinition>

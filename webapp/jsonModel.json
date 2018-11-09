@@ -1,0 +1,777 @@
+{
+	"Sales": [{
+			"CarName": "Audi Q3",
+			"image": "https://st.motortrend.ca/uploads/sites/10/2016/06/2016-audi-q3-premium-plus-suv-angular-front.png",
+			"Colors": [{
+				"Color1": "Mythos Black",
+				"Color2": "Misano Red",
+				"Color3": "Hanian Blue",
+				"Color4": "Cortina White"
+			}],
+			"Engine": "1395 CC to 1968 CC",
+			"TopSpeed": "204KMPH",
+			"Year": "2018",
+			"Cost": "Rs. 34.73 lakh"
+
+		}, {
+			"CarName": "Audi A4",
+			"image": "https://s.aolcdn.com/commerce/autodata/images/USC70AUC017A021001.jpg",
+			"Colors": [{
+				"Color1": "Tango Red Metallic",
+				"Color2": "Mythos Black",
+				"Color3": "Moonshine Blue",
+				"Color4": "Ibis White"
+			}],
+			"Engine": "1395 CC to 1968 CC",
+			"TopSpeed": "210KMPH",
+			"Year": "1994",
+			"Cost": "Rs. 41.47 lakh"
+
+		}, {
+			"CarName": "Audi A8",
+			"image": "https://st.motortrend.ca/uploads/sites/10/2015/11/2016-audi-a8-l-42-sedan-angular-front.png",
+			"Colors": [{
+				"Color1": "Sand Beige Pearl Eﬀect",
+				"Color2": "Saddle Brown Pearl Eﬀect",
+				"Color3": "Palace Blue Pearl Eﬀect",
+				"Color4": "Moonlight Blue Metallic"
+			}],
+			"Engine": "2967 CC to 6299 CC",
+			"TopSpeed": "250KMPH",
+			"Year": "2002",
+			"Cost": "Rs. 1.23 crore"
+
+		}, {
+			"CarName": "Audi A3",
+			"image": "https://st.motortrend.ca/uploads/sites/10/2015/11/2016-audi-a3-sedan-prestige-sedan-angular-front.png",
+			"Colors": [{
+				"Color1": "Vegas Yellow",
+				"Color2": "Tango Red Metallic",
+				"Color3": "Glacier White Metallic",
+				"Color4": "Brilliant Black"
+			}],
+			"Engine": "1395 CC to 1968 CC",
+			"TopSpeed": "224KMPH",
+			"Year": "2004",
+			"Cost": "Rs. 33.10 lakh"
+
+		}, {
+			"CarName": "Audi R8",
+			"image": "https://www.freeiconspng.com/uploads/hd-orange-audi-r8-car-png-24.png",
+			"Colors": [{
+				"Color1": "Teak Brown Metallic",
+				"Color2": "Suzuka Grey Metallic",
+				"Color3": "Sepang Blue Pearl Effect",
+				"Color4": "Samoa Orange"
+			}],
+			"Engine": "5204 CC",
+			"TopSpeed": "330KMPH",
+			"Year": "2006",
+			"Cost": "Rs. 2.72 crore"
+
+		}, {
+			"CarName": "Audi RS6 Avant",
+			"image": "https://www.myaudiworld.sg/assets2/Images/MyGuide/ExploreYourAudi/VisualGuide/RS6-Avant/RS6-Avant-Gallery_01.png",
+			"Colors": [{
+				"Color1": "Sepang Blue Pearl Effect",
+				"Color2": "Prisma Silver Crystal Effect",
+				"Color3": "Nardo Grey",
+				"Color4": "Misano Red Pearl Effect"
+			}],
+			"Engine": "3993 CC",
+			"TopSpeed": "280KMPH",
+			"Year": "2015",
+			"Cost": "Rs. 1.46 crore"
+
+		}, {
+			"CarName": "Audi RS7",
+			"image": "https://st.motortrend.ca/uploads/sites/10/2016/05/2016-audi-rs7-hatchback-angular-front-2.png",
+			"Colors": [{
+				"Color1": "Suzuka Grey Metallic",
+				"Color2": "Nardo Grey",
+				"Color3": "Misano Red Pearl Effect",
+				"Color4": "Estoril Blue Crysta"
+			}],
+			"Engine": "3993 CC",
+			"TopSpeed": "250KMPH",
+			"Year": "2010",
+			"Cost": "Rs. 1.65 crore"
+
+		}, {
+			"CarName": "Audi S5",
+			"image": "https://cdn2.carbuyer.co.uk/sites/carbuyer_d7/files/audi-s5-cutout.jpg",
+			"Colors": [{
+				"Color1": "Tango Red Metallic",
+				"Color2": "Blue Graphite Metallic",
+				"Color3": "Mythos Black",
+				"Color4": "Floret Silver Metallic"
+			}],
+			"Engine": "2995 CC",
+			"TopSpeed": "250KMPH",
+			"Year": "2017",
+			"Cost": "Rs. 72.41 lakh"
+
+		}
+
+	],
+	"Production": [{
+			"CarName": "Audi S7",
+			"image": "https://62ff7765a0021ee1bc12-7adc2f78e59415aa14b26ab610ef4915.ssl.cf1.rackcdn.com/WAU2FAFC4JN079558/670c38624d53ec4f50f7cbcf2884c84f.jpg",
+			"Colors": [{
+				"Color1": "Mythos Black",
+				"Color2": "Misano Red",
+				"Color3": "Hanian Blue",
+				"Color4": "Cortina White"
+			}],
+			"Engine": "1395 CC to 1968 CC",
+			"TopSpeed": "204KMPH",
+			"Year": "2017",
+			"Cost": "Rs. 34.73 lakh"
+
+		}, {
+			"CarName": "Audi A4",
+			"image": "https://s.aolcdn.com/commerce/autodata/images/USC70AUC017A021001.jpg",
+			"Colors": [{
+				"Color1": "Tango Red Metallic",
+				"Color2": "Mythos Black",
+				"Color3": "Moonshine Blue",
+				"Color4": "Ibis White"
+			}],
+			"Engine": "1395 CC to 1968 CC",
+			"TopSpeed": "210KMPH",
+			"Year": "1994",
+			"Cost": "Rs. 41.47 lakh"
+
+		}, {
+			"CarName": "Audi A8",
+			"image": "https://st.motortrend.ca/uploads/sites/10/2015/11/2016-audi-a8-l-42-sedan-angular-front.png",
+			"Colors": [{
+				"Color1": "Sand Beige Pearl Eﬀect",
+				"Color2": "Saddle Brown Pearl Eﬀect",
+				"Color3": "Palace Blue Pearl Eﬀect",
+				"Color4": "Moonlight Blue Metallic"
+			}],
+			"Engine": "2967 CC to 6299 CC",
+			"TopSpeed": "250KMPH",
+			"Year": "2002",
+			"Cost": "Rs. 1.23 crore"
+
+		}, {
+			"CarName": "Audi A3",
+			"image": "https://www.cars.com/cstatic-images/car-pictures/xl/usb80auc151a0112.png",
+			"Colors": [{
+				"Color1": "Vegas Yellow",
+				"Color2": "Tango Red Metallic",
+				"Color3": "Glacier White Metallic",
+				"Color4": "Brilliant Black"
+			}],
+			"Engine": "1395 CC to 1968 CC",
+			"TopSpeed": "224KMPH",
+			"Year": "2004",
+			"Cost": "Rs. 33.10 lakh"
+
+		}, {
+			"CarName": "Audi R8",
+			"image": "https://st.motortrend.com/uploads/sites/10/2017/09/2018-audi-r8-coupe-angular-front.png",
+			"Colors": [{
+				"Color1": "Teak Brown Metallic",
+				"Color2": "Suzuka Grey Metallic",
+				"Color3": "Sepang Blue Pearl Effect",
+				"Color4": "Samoa Orange"
+			}],
+			"Engine": "5204 CC",
+			"TopSpeed": "330KMPH",
+			"Year": "2006",
+			"Cost": "Rs. 2.72 crore"
+
+		}, {
+			"CarName": "Audi RS6 Avant",
+			"image": "https://www.audi.in/content/dam/nemo/models/a6/rs-6-avant/my-2018/1920x1080-gallery/1920x1080_ARS6_161001_1.jpg",
+			"Colors": [{
+				"Color1": "Sepang Blue Pearl Effect",
+				"Color2": "Prisma Silver Crystal Effect",
+				"Color3": "Nardo Grey",
+				"Color4": "Misano Red Pearl Effect"
+			}],
+			"Engine": "3993 CC",
+			"TopSpeed": "280KMPH",
+			"Year": "2015",
+			"Cost": "Rs. 1.46 crore"
+
+		}, {
+			"CarName": "Audi RS7",
+			"image": "https://imgct2.aeplcdn.com/img/800x600/car-data/big/audi-rs-7-sportback-default-image.png-version201805041921.png?v=29",
+			"Colors": [{
+				"Color1": "Suzuka Grey Metallic",
+				"Color2": "Nardo Grey",
+				"Color3": "Misano Red Pearl Effect",
+				"Color4": "Estoril Blue Crysta"
+			}],
+			"Engine": "3993 CC",
+			"TopSpeed": "250KMPH",
+			"Year": "2010",
+			"Cost": "Rs. 1.65 crore"
+
+		}, {
+			"CarName": "Audi S5",
+			"image": "http://1-photos7.motorcar.com/new-2018-audi-s5-30tpremiumplus-11350-17707450-1-1024.jpg",
+			"Colors": [{
+				"Color1": "Tango Red Metallic",
+				"Color2": "Blue Graphite Metallic",
+				"Color3": "Mythos Black",
+				"Color4": "Floret Silver Metallic"
+			}],
+			"Engine": "2995 CC",
+			"TopSpeed": "250KMPH",
+			"Year": "2017",
+			"Cost": "Rs. 72.41 lakh"
+
+		}
+
+	],
+	"eighteen": [{
+			"month": "Jan",
+			"SoldCar": "3",
+			"Price": "2.1"
+
+		}, {
+			"month": "Feb",
+			"SoldCar": "4",
+			"Price": "3.1"
+
+		}, {
+			"month": "Mar",
+			"SoldCar": "1",
+			"Price": "0.7"
+
+		}, {
+			"month": "Apr",
+			"SoldCar": "3",
+			"Price": "2.1"
+
+		}, {
+			"month": "May",
+			"SoldCar": "2",
+			"Price": "1.1"
+
+		}, {
+			"month": "June",
+			"SoldCar": "4",
+			"Price": "2.8"
+
+		}, {
+			"month": "Jul",
+			"SoldCar": "5",
+			"Price": "3.6"
+
+		}, {
+			"month": "Aug",
+			"SoldCar": "3",
+			"Price": "2.1"
+
+		}, {
+			"month": "Sep",
+			"SoldCar": "4",
+			"Price": "3.1"
+
+		}, {
+			"month": "Oct",
+			"SoldCar": "5",
+			"Price": "4.1"
+
+		}, {
+			"month": "Nov",
+			"SoldCar": "2",
+			"Price": "1.5"
+
+		}, {
+			"month": "Dec",
+			"SoldCar": "2",
+			"Price": "1.7"
+
+		}
+
+	],
+	"Parts": [{
+			"PartsName": "Wheel",
+			"Img": "",
+			"Price": "Rs.10,816.84/-",
+			"AvailableColours": [{
+
+				"Color1": "Black",
+				"Color2": "Grey",
+				"Color3": "White"
+			}]
+
+		}, {
+			"PartsName": "Brake Disc",
+			"Img": "",
+			"Price": "Rs.9,334.64/-",
+			"AvailableColours": [{
+
+				"Color1": "White",
+				"Color2": "Black"
+			}]
+
+		}, {
+			"PartsName": "Tail Light",
+			"Img": "",
+			"Price": "Rs.8,734/-",
+			"AvailableColours": [{
+
+				"Color1": "White",
+				"Color2": "Red",
+				"Color3": "Transperent"
+			}]
+
+		}, {
+			"PartsName": "Floor Mats",
+			"Img": "",
+			"Price": "Rs.2,646/-",
+			"AvailableColours": [{
+
+				"Color1": "White",
+				"Color2": "Black",
+				"Color3": "Brown"
+			}]
+
+		}, {
+			"PartsName": "Bumper",
+			"Img": "",
+			"Price": "Rs.7,453/-",
+			"AvailableColours": [{
+
+				"Color1": "Grey",
+				"Color2": "Black",
+				"Color3": "Brown"
+			}]
+
+		}, {
+			"PartsName": "Headlight",
+			"Img": "",
+			"Price": "Rs.4,753/-",
+			"AvailableColours": [{
+
+				"Color1": "Transperent"
+			}]
+
+		}, {
+			"PartsName": "Mirror",
+			"Img": "",
+			"Price": "Rs.2,345/-",
+			"AvailableColours": [{
+
+				"Color1": "White",
+				"Color2": "Black",
+				"Color3": "Red"
+			}]
+
+		}, {
+			"PartsName": "Axle",
+			"Img": "",
+			"Price": "Rs.4,435/-",
+			"AvailableColours": [{
+
+				"Color1": "Black"
+
+			}]
+
+		}, {
+			"PartsName": "Radiator",
+			"Img": "",
+			"Price": "Rs.10,765/-",
+			"AvailableColours": [{
+
+				"Color1": "White"
+			}]
+
+		}, {
+			"PartsName": "Fog Light",
+			"Img": "",
+			"Price": "Rs.4,435/-",
+			"AvailableColours": [{
+
+				"Color1": "Transperent"
+			}]
+
+		}, {
+			"PartsName": "Door",
+			"Img": "",
+			"Price": "Rs.35,999/-",
+			"AvailableColours": [{
+
+				"Color1": "Black",
+				"Color2": "White",
+				"Color3": "Red",
+				"Color": "Blue"
+			}]
+
+		}, {
+			"PartsName": "Axle",
+			"Img": "",
+			"Price": "Rs.4,435/-",
+			"AvailableColours": [{
+
+				"Color1": "Black"
+			}]
+
+		}
+
+	],
+	"partsProduction": [{
+			"PartsName": "Wheel",
+			"Img": "",
+			"Price": "Rs.10,816.84/-",
+			"AvailableColours": [{
+
+				"Color1": "White",
+				"Color2": "Grey",
+				"Color3": "Black"
+			}]
+
+		}, {
+			"PartsName": "Brake Disc",
+			"Img": "",
+			"Price": "Rs.9,334.64/-",
+			"AvailableColours": [{
+
+				"Color1": "White"
+			}]
+
+		}, {
+			"PartsName": "Tail Light",
+			"Img": "",
+			"Price": "Rs.8,734/-",
+			"AvailableColours": [{
+
+				"Color1": "White",
+				"Color2": "Red",
+				"Color3": "Transperent"
+			}]
+
+		}, {
+			"PartsName": "Floor Mats",
+			"Img": "",
+			"Price": "Rs.2,646/-",
+			"AvailableColours": [{
+
+				"Color1": "White",
+				"Color2": "Black",
+				"Color3": "Brown"
+			}]
+
+		}, {
+			"PartsName": "Bumper",
+			"Img": "",
+			"Price": "Rs.7,453/-",
+			"AvailableColours": [{
+
+				"Color1": "Grey",
+				"Color2": "Black",
+				"Color3": "Brown"
+			}]
+
+		}, {
+			"PartsName": "Headlight",
+			"Img": "",
+			"Price": "Rs.4,753/-",
+			"AvailableColours": [{
+
+				"Color1": "Transperent"
+			}]
+
+		}, {
+			"PartsName": "Mirror",
+			"Img": "",
+			"Price": "Rs.2,345/-",
+			"AvailableColours": [{
+
+				"Color1": "White",
+				"Color2": "Black",
+				"Color3": "Red"
+			}]
+
+		}, {
+			"PartsName": "Axle",
+			"Img": "",
+			"Price": "Rs.4,435/-",
+			"AvailableColours": [{
+
+				"Color1": "Black"
+			}]
+
+		}, {
+			"PartsName": "Radiator",
+			"Img": "",
+			"Price": "Rs.10,765/-",
+			"AvailableColours": [{
+
+				"Color1": "White"
+			}]
+
+		}, {
+			"PartsName": "Fog Light",
+			"Img": "",
+			"Price": "Rs.4,435/-",
+			"AvailableColours": [{
+
+				"Color1": "Transperent"
+			}]
+
+		}, {
+			"PartsName": "Door",
+			"Img": "",
+			"Price": "Rs.35,999/-",
+			"AvailableColours": [{
+
+				"Color1": "Black",
+				"Color2": "White",
+				"Color3": "Red",
+				"Color": "Blue"
+			}]
+
+		}, {
+			"PartsName": "Axle",
+			"Img": "",
+			"Price": "Rs.4,435/-",
+			"AvailableColours": [{
+
+				"Color1": "Black"
+			}]
+
+		}
+
+	],
+	"ServiceDone": [{
+		"year": "2018",
+		"No: Of servive": "9000"
+	}, {
+		"year": "2017",
+		"No: Of servive": "7000"
+	}, {
+		"year": "2016",
+		"No: Of servive": "1600"
+	}, {
+		"year": "2015",
+		"No: Of servive": "6700"
+	}, {
+		"year": "2014",
+		"No: Of servive": "5600"
+	}, {
+		"year": "2013",
+		"No: Of servive": "3563"
+	}],
+	"ProductSold": [{
+		"year": "2018",
+		"SoldOut": "9700"
+	}, {
+		"year": "2017",
+		"SoldOut": "8765"
+	}, {
+		"year": "2016",
+		"SoldOut": "8675"
+	}, {
+		"year": "2015",
+		"SoldOut": "6434"
+	}, {
+		"year": "2014",
+		"SoldOut": "5436"
+	}, {
+		"year": "2013",
+		"SoldOut": "4563"
+	}],
+	"AllTransaction": [{
+		"year": "2018",
+		"Profit": "874643"
+	}, {
+		"year": "2017",
+		"Profit": "646648"
+	}, {
+		"year": "2016",
+		"Profit": "646436"
+	}, {
+		"year": "2015",
+		"Profit": "663738"
+	}, {
+		"year": "2014",
+		"Profit": "937363"
+	}, {
+		"year": "2013",
+		"Profit": "938376"
+	}],
+	"ServiceTransaction": [{
+			"year": "2018",
+			"Month": "January",
+			"No.OfService": "98654",
+			"Amnt.OfService": "9876543",
+			"No.OfPartsSold": "76543",
+			"Amnt.OfPartsSold": "9876543",
+			"TotalAmnt": "98765435"
+		}, {
+			"year": "2018",
+			"Month": "February",
+			"No.OfService": "87698",
+			"Amnt.OfService": "8764367",
+			"No.OfPartsSold": "87645",
+			"Amnt.OfPartsSold": "8797435",
+			"TotalAmnt": "99876543"
+		}, {
+			"year": "2018",
+			"Month": "March",
+			"No.OfService": "98767",
+			"Amnt.OfService": "9876786",
+			"No.OfPartsSold": "87656",
+			"Amnt.OfPartsSold": "8987676",
+			"TotalAmnt": "99876565"
+		}, {
+			"year": "2018",
+			"Month": "April",
+			"No.OfService": "87765",
+			"Amnt.OfService": "8798986",
+			"No.OfPartsSold": "67654",
+			"Amnt.OfPartsSold": "9876543",
+			"TotalAmnt": "90987656"
+		}, {
+			"year": "2018",
+			"Month": "May",
+			"No.OfService": "98987",
+			"Amnt.OfService": "8786565",
+			"No.OfPartsSold": "76754",
+			"Amnt.OfPartsSold": "9875454",
+			"TotalAmnt": "76765454"
+		}, {
+			"year": "2018",
+			"Month": "June",
+			"No.OfService": "76765",
+			"Amnt.OfService": "9876545",
+			"No.OfPartsSold": "98765",
+			"Amnt.OfPartsSold": "7865656",
+			"TotalAmnt": "90989876"
+		}, {
+			"year": "2018",
+			"Month": "July",
+			"No.OfService": "78765",
+			"Amnt.OfService": "9898989",
+			"No.OfPartsSold": "89787",
+			"Amnt.OfPartsSold": "9099987",
+			"TotalAmnt": "90908787"
+		}, {
+			"year": "2018",
+			"Month": "August",
+			"No.OfService": "98654",
+			"Amnt.OfService": "9876543",
+			"No.OfPartsSold": "76543",
+			"Amnt.OfPartsSold": "9876543",
+			"TotalAmnt": "98765435"
+		}, {
+			"year": "2018",
+			"Month": "September",
+			"No.OfService": "98699",
+			"Amnt.OfService": "9876787",
+			"No.OfPartsSold": "76543",
+			"Amnt.OfPartsSold": "9876543",
+			"TotalAmnt": "98765435"
+		}, {
+			"year": "2018",
+			"Month": "October",
+			"No.OfService": "98654",
+			"Amnt.OfService": "9876543",
+			"No.OfPartsSold": "76543",
+			"Amnt.OfPartsSold": "9676576",
+			"TotalAmnt": "98765435"
+		}, {
+			"year": "2018",
+			"Month": "November",
+			"No.OfService": "98654",
+			"Amnt.OfService": "9876543",
+			"No.OfPartsSold": "76543",
+			"Amnt.OfPartsSold": "9876543",
+			"TotalAmnt": "98765435"
+		}, {
+			"year": "2018",
+			"Month": "December",
+			"No.OfService": "67676",
+			"Amnt.OfService": "9087676",
+			"No.OfPartsSold": "78757",
+			"Amnt.OfPartsSold": "9876575",
+			"TotalAmnt": "7898987"
+		}
+
+	],
+	"CustomerServiceDetails": [{
+			"Name": "Abi Abraham",
+			"Email": "Abiabraham@gmail.com",
+			"MobileNo": "9744478366",
+			"CarModel": "Audi A6",
+			"CarNumber": "IN003",
+			"Date": "01/7/2018",
+			"Issue": "Light",
+			"PartsReplaced": "Fog Light"
+		}, {
+			"Name": "Sanju",
+			"Email": "sanju@gmail.com",
+			"MobileNo": "9846765436",
+			"CarModel": "Audi A3",
+			"CarNumber": "IN0098",
+			"Date": "07/10/2018",
+			"Issue": "Tier",
+			"PartsReplaced": "Tier"
+		}, {
+			"Name": "Jubin",
+			"Email": "jubin@gmail.com",
+			"MobileNo": "8122646213",
+			"CarModel": "Audi Q5",
+			"CarNumber": "IN0076",
+			"Date": "08/11/2018",
+			"Issue": "Frond Glassr",
+			"PartsReplaced": "Frond Glass"
+		}, {
+			"Name": "Basil",
+			"Email": "basil@gmail.com",
+			"MobileNo": "8374391907",
+			"CarModel": "Audi Q3",
+			"CarNumber": "IN0094",
+			"Date": "18/10/2018",
+			"Issue": "Breack Light",
+			"PartsReplaced": "Break Light"
+		}, {
+			"Name": "Sanal",
+			"Email": "sanal@gmail.com",
+			"MobileNo": "9846246513",
+			"CarModel": "Audi A4",
+			"CarNumber": "IN0076",
+			"Date": "24/09/2018",
+			"Issue": "Seat",
+			"PartsReplaced": "Seat"
+		}, {
+			"Name": "Snehesh",
+			"Email": "snehesh@gmail.com",
+			"MobileNo": "8547199836",
+			"CarModel": "Audi R8",
+			"CarNumber": "IN00987",
+			"Date": "03/11/2018",
+			"Issue": "Breack Light",
+			"PartsReplaced": "Break Light"
+		}, {
+			"Name": "Rahul",
+			"Email": "rahul@gmail.com",
+			"MobileNo": "9876567856",
+			"CarModel": "Audi S5",
+			"CarNumber": "IN0786",
+			"Date": "19/09/2018",
+			"Issue": "Bumber",
+			"PartsReplaced": "Bumber"
+		}, {
+			"Name": "Tovino",
+			"Email": "tovino@gmail.com",
+			"MobileNo": "9789765643",
+			"CarModel": "Audi A5",
+			"CarNumber": "IN00984",
+			"Date": "24/10/2018",
+			"Issue": "Side Mirror",
+			"PartsReplaced": "Side Mirror"
+		}
+
+	]
+
+}

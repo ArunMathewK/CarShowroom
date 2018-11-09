@@ -1,0 +1,326 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" controllerName="Showroom.CarShowroom.controller.Service"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:smartMultiInput="sap.ui.comp.smartmultiinput" xmlns:smartForm="sap.ui.comp.smartform" displayBlock="true" xmlns="sap.m"
+	class="side-navigation-demo" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<!--<tnt:ToolHeader height="11%" >-->
+	<!--	<Image id="abc22" src="./Img/logo1.png" class="logoimage"/>-->
+	<!--	<ToolbarSpacer/>-->
+	<!--	<Text text="SHOWROOM NAME"/>-->
+	<!--	<ToolbarSpacer/>-->
+	<!--	<Button text="Transaction Details" press="oTransaction"/>-->
+	<!--</tnt:ToolHeader>-->
+	<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+		<detailPages >
+			<Page id="detail" title="Service Details" class="sapUiStdPage" floatingFooter="true">
+				<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+					<items>
+						<IconTabFilter text="Register">
+							<VBox class="sapUiSmallMargin">
+								<f:SimpleForm id="SimpleFormDisplay354" editable="true" layout="ResponsiveGridLayout" title="Enter the Customer Details" labelSpanXL="3"
+									labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0"
+									columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+									<f:content>
+										<Label text="Name"/>
+										<Input placeholder="Enter the Customer Name"/>
+										<Label text="Email"/>
+										<Input placeholder="Enter the Customer Email Id"/>
+										<Label text="Mobile No:"/>
+										<Input placeholder="Enter the Customer No:"/>
+										<Label text="Car Model"/>
+										<Input placeholder=" Car Model"/>
+										<Label text="Car Number"/>
+										<Input placeholder="Car Number"/>
+										<Label text="Date"/>
+										<Input placeholder="Enter the date"/>
+									</f:content>
+								</f:SimpleForm>
+							</VBox>
+						</IconTabFilter>
+						<IconTabFilter text="Issue">
+							<VBox class="sapUiSmallMargin">
+								<f:SimpleForm id="SimpleFormDisplay" editable="true" layout="ResponsiveGridLayout" title="Enter Service Details" labelSpanXL="3"
+									labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0"
+									columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+									<f:content>
+										<Label text="Service type"/>
+										<Input placeholder="Enter the Servicde type"/>
+										<Label text="Issue"/>
+										<Input placeholder="Enter the Problem of the Vehicle"/>
+										<Label text="Parts Replaced" labelFor="multiInput1"/>
+										<MultiInput id="multiInput2" placeholder="Parts Replaced" showValueHelp="false"/>
+									</f:content>
+								</f:SimpleForm>
+							</VBox>
+						</IconTabFilter>
+					</items>
+				</IconTabBar>
+				<footer >
+					<Bar class="sapUiStdFooter">
+						<contentRight>
+							<Button xmlns="sap.m" type="Reject" text="CANCEL" id="addemp" icon="sap-icon://sys-cancel" tooltip="Camcel the item"/>
+							<Button xmlns="sap.m" type="Accept" text="SAVE" id="addemp1" icon="sap-icon://save" tooltip="Camcel the item"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+			<Page id="detailDetail" title="Parts Available" class="sapUiStdPage" floatingFooter="true">
+				<Toolbar>
+					<SearchField liveChange="onSearch" id="idSearch1" width="40%"/>
+				</Toolbar>
+				<content>
+					<List id="idlist1" items="{ path:'myModel>/Parts' }" itemPress="pdetails" mode="MultiSelect">
+						<items>
+							<ObjectListItem type="Navigation" title="Name:{myModel>PartsName}" icon="" id="listItem" selected="false" number="Price:{myModel>Price}"
+								numberUnit="Color:{myModel>AvailableColours/0/Color1}"/>
+						</items>
+					</List>
+				</content>
+				<footer>
+					<Bar class="sapUiStdFooter">
+						<contentRight>
+							<Button xmlns="sap.m" type="Accept" text="BOOK" id="addemp5" icon="sap-icon://add" tooltip="Book the item"/>
+							<Button xmlns="sap.m" class="sapUiSmallMarginBottom" type="Ghost" press="oProduction" text="CHECK PRODUCTION" id="addemp6"
+								icon="sap-icon://check-availability" tooltip="CLICK HERE IF THE ITEM ISN'T AVAILABLE IN INVENTORY"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+			<Page id="detail2" title="Billing" class="sapUiStdPage" floatingFooter="true">
+				<content>
+					<Toolbar>
+						<Text text="Showroom name"/>
+						<ToolbarSpacer/>
+						<Image src="./Img/logo1.png" class="logoimage"/>
+						<ToolbarSpacer/>
+						<Text text="INVOICE"/>
+					</Toolbar>
+					<ToolbarSpacer/>
+					<Toolbar>
+						<Label text="Date:" labelFor="DP1"/>
+						<DatePicker id="DP1" placeholder="Enter Date" change="handleChange" width="15%"/>
+						<ToolbarSpacer/>
+						<Label text="Invoice#:"/>
+						<Input placeholder="invoice No:" value="" id="idInvoiceNo" width="15%"/>
+					</Toolbar>
+					<VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="SimpleFormDisplayColumn_oneGroup234" editable="false" columnsM="2" columnsL="2" columnsXL="2">
+							<f:content>
+								<core:Title text="Customer Info."/>
+								<Label text="Name"/>
+								<Input id="nameText" placeholder="Name" value=""/>
+								<Label text="Address"/>
+								<TextArea placeholder="Address" value=""/>
+								<core:Title text="Vehicle Info."/>
+								<Label text="Model"/>
+								<Input placeholder="model" value=""/>
+								<Label text="Year"/>
+								<Input placeholder="Year" value=""/>
+								<Label text="Color"/>
+								<Input value="" placeholder="Color"/>
+								<Label text="Milage"/>
+								<Input value="" placeholder="Milage"/>
+							</f:content>
+						</f:SimpleForm>
+					</VBox>
+					<Table items="" id="table" growing="true" growingThreshold="50" class="sapUiSmallMargin">
+						<columns>
+							<Column >
+								<Text text="Job Performed" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="HOURS" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="RATE" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="AMOUNT" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem >
+								<cells>
+									<Input value="" placeholder=""/>
+								</cells>
+								<cells>
+									<Input value="" placeholder=""/>
+								</cells>
+								<cells>
+									<Input value="" placeholder=""/>
+								</cells>
+								<cells>
+									<Input value="" placeholder=""/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Label text="Sub Total:"/>
+						<Input value="" width="20%"/>
+					</Toolbar>
+					<Table items="" id="table1" growing="true" growingThreshold="50" class="sapUiSmallMargin">
+						<columns>
+							<Column >
+								<Text text="PART NAME" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="QTY" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="UNIT PRICE" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="AMOUNT" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem >
+								<cells>
+									<Input value="" placeholder=""/>
+								</cells>
+								<cells>
+									<Input value="" placeholder=""/>
+								</cells>
+								<cells>
+									<Input value="" placeholder=""/>
+								</cells>
+								<cells>
+									<Input value="" placeholder=""/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Label text="Sub Total:"/>
+						<Input value="" width="20%"/>
+					</Toolbar>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Label text="GRAND TOTAL:"/>
+						<Input value="" width="30%"/>
+					</Toolbar>
+					<Toolbar>
+						<Label text="Sign. of Service Manager"/>
+						<ToolbarSpacer/>
+						<Label text="Seal"/>
+						<ToolbarSpacer/>
+						<Label text="Customer Sign."/>
+					</Toolbar>
+					<!--<VBox class="sapUiSmallMargin">-->
+					<!--	<f:SimpleForm  editable="false" layout="ColumnLayout" columnsM="3" columnsL="3" columnsXL="3">-->
+					<!--		<f:content>-->
+					<!--			<Label text="Sign. of Service Manager"/>-->
+					<!--			<Label text="Seal"/>-->
+					<!--			<Label text="Customer Sign."/>-->
+					<!--		</f:content>-->
+					<!--	</f:SimpleForm>-->
+					<!--</VBox>-->
+				</content>
+				<footer>
+					<Bar class="sapUiStdFooter">
+						<contentRight>
+							<Button xmlns="sap.m" type="Reject" text="Clear Fields" icon="sap-icon://cancel" press="addEmployee" tooltip="Clear Fields"/>
+							<Button xmlns="sap.m" type="Ghost" text="Print" icon="sap-icon://print" press="addEmployee" tooltip="Print"/>
+							<Button xmlns="sap.m" type="Accept" text="Download" icon="sap-icon://download" press="addEmployee" tooltip="Download"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+			<Page id="detail3" title="Transaction Details" class="sapUiStdPage" floatingFooter="true">
+				<content>
+					<Toolbar>
+						<Button text="Graphical view" press="g"/>
+						<ToolbarSpacer/>
+						<ComboBox items="">
+							<core:Item key="" text="2018"/>
+							<core:Item key="" text="2017"/>
+							<core:Item key="" text="2016"/>
+							<core:Item key="" text="2015"/>
+						</ComboBox>
+					</Toolbar>
+					<VBox fitContainer="true">
+						<Table items="" growing="true">
+							<columns>
+								<Column >
+									<Text text="MONTH" class="sapUiLargeMarginBeginEnd"/>
+								</Column>
+								<Column demandPopin="true" minScreenWidth="Tablet">
+									<Text text="NO: OF SERVICE DONE" class="sapUiLargeMarginBeginEnd"/>
+								</Column>
+								<Column demandPopin="true" minScreenWidth="Tablet">
+									<Text text="AMT. OF SERVICE DONE/MONTH" class="sapUiLargeMarginBeginEnd"/>
+								</Column>
+								<Column demandPopin="true" minScreenWidth="Tablet">
+									<Text text="NO: OF PARTS SOLD OUT/MONTH" class="sapUiLargeMarginBeginEnd"/>
+								</Column>
+								<Column demandPopin="true" minScreenWidth="Tablet">
+									<Text text="AMT. OF PARTS SOLD OUT/MONTH" class="sapUiLargeMarginBeginEnd"/>
+								</Column>
+								<Column demandPopin="true" minScreenWidth="Tablet">
+									<Text text="TOTAL AMOUNT" class="sapUiLargeMarginBeginEnd"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem >
+									<cells>
+										<Input value="" placeholder=""/>
+									</cells>
+									<cells>
+										<Input value="" placeholder=""/>
+									</cells>
+									<cells>
+										<Input value="" placeholder=""/>
+									</cells>
+									<cells>
+										<Input value="" placeholder=""/>
+									</cells>
+									<cells>
+										<Input value="" placeholder=""/>
+									</cells>
+									<cells>
+										<Input value="" placeholder=""/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</VBox>
+				</content>
+				<footer>
+					<Bar class="sapUiStdFooterm">
+						<contentRight></contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</detailPages>
+		<masterPages height="100%">
+			
+					<Page id="master2" title="" floatingFooter="true" class="sapUiStdPage">
+						<headerContent>
+							<!--<tnt:ToolHeader >-->
+							<Button type="Reject" icon="sap-icon://log" press="logOut"/>
+							<!--</tnt:ToolHeader>-->
+						</headerContent>
+						<content >
+							<List itemPress="onListItemPress">
+								<items>
+									<StandardListItem title="Service Details" type="Navigation" custom:to="detail"/>
+									<StandardListItem title="Parts Available" type="Navigation" custom:to="detailDetail"/>
+									<StandardListItem title="Billing" type="Navigation" custom:to="detail2"/>
+									<StandardListItem title="Transaction Details" type="Navigation" custom:to="detail3"/>
+								</items>
+							</List>
+						</content>
+						<footer>
+							<Bar class="sapUiStdFooterm">
+								<contentRight>
+									<!--<Button text="Transaction Details" type="Ghost" press="oTransaction"/>-->
+								</contentRight>
+							</Bar>
+						</footer>
+					</Page>
+				
+				</masterPages>
+			</SplitApp>
+		</mvc:View>

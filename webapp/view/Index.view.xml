@@ -1,0 +1,40 @@
+<mvc:View controllerName="Showroom.CarShowroom.controller.Index" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:form="sap.ui.layout.form" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page showFooter="true" floatingFooter="true" showHeader="false" enableScrolling="false">
+				<tnt:ToolHeader height="11%">
+					<Image id="abc22" src="./Img/logo1.png" class="Indexlogoimage"/>
+					<ToolbarSpacer/>
+					<Text text="SHOWROOM NAME"/>
+					<ToolbarSpacer/>
+				</tnt:ToolHeader>
+				<content>
+					<l:BlockLayout id="BlockLayoutTwo">
+						<l:BlockLayoutRow  >
+							<l:BlockLayoutCell backgroundColorSet="ColorSet10" backgroundColorShade="ShadeA" titleAlignment="Center"/>
+						</l:BlockLayoutRow >
+						<l:BlockLayoutRow class="BlockLayoutRow">
+							<l:BlockLayoutCell backgroundColorSet="ColorSet10" backgroundColorShade="ShadeB" titleAlignment="Center" />
+							<l:BlockLayoutCell id="cell-2" title="LOGIN HERE!.." backgroundColorSet="ColorSet5" backgroundColorShade="ShadeA" titleAlignment="Center">
+								<HBox fitContainer="true" justifyContent="Center" alignItems="Center">
+									<f:SimpleForm editable="true" layout="ResponsiveGridLayout" title="" adjustLabelSpan="false" singleContainerFullSize="false">
+										<f:content>
+											<Input id="uid" placeholder="Enter the User Name" width="100%" class="sapUiSmallMarginBottom sapUiSmallMarginTop"/>
+											<Input id="psw" placeholder="Enter the Password" type="Password" width="100%" class="sapUiSmallMarginBottom sapUiSmallMarginTop"/>
+											<Button type="Accept" press="logIn" text="LOGIN" icon="sap-icon://visits" width="100%" class="sapUiSmallMarginBottom sapUiSmallMarginTop"/>
+										</f:content>
+									</f:SimpleForm>
+								</HBox>
+							</l:BlockLayoutCell>
+							<l:BlockLayoutCell backgroundColorSet="ColorSet10" backgroundColorShade="ShadeA" titleAlignment="Center" />
+						</l:BlockLayoutRow>
+						<l:BlockLayoutRow class="BlockLayoutRow"  >
+							<l:BlockLayoutCell backgroundColorSet="ColorSet10" backgroundColorShade="ShadeB" titleAlignment="Center"/>
+						</l:BlockLayoutRow >
+					</l:BlockLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

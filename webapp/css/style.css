@@ -1,0 +1,27 @@
+
+.Indexlogoimage {
+    width: 15%;
+    height: 100%;
+}
+
+.logoimage {
+    width: 15%;
+    height: 100%;
+}
+/*.navContainerControl {*/
+/*	border-color: #888;*/
+/*	border-style: solid;*/
+/*	border-width: 0.0625em;*/
+/*}*/
+.VBox{
+	background-color:#abc5df;
+}
+.BlockLayoutRow{
+margin-top:100px;
+}
+.navContainerControl{
+	height:100%;
+}
+.sapUiHugeMarginEnda{
+	margin-left:-50px;
+}

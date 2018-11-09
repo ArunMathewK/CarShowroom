@@ -1,0 +1,69 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Showroom.CarShowroom.controller.Sales"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:tnt="sap.tnt" displayBlock="true">
+	<App>
+		<pages>
+			<Page >
+				<headerContent >
+					<tnt:ToolHeader >
+						<Image src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c46b.png" class="logoimage"/>
+						<ToolbarSpacer/>
+						<Button type="Reject" icon="sap-icon://log" press="logOut" />
+					</tnt:ToolHeader>
+				</headerContent>
+				<content>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button text="Transaction" press="Transaction"/>
+						<Button text="Production" press="Production" id="helloDialogButton"/>
+						<SearchField liveChange="onSearch" id="list1" width="40%"/>
+					</Toolbar>
+					<Table items="{myModel>/Sales}"   itemPress="onItemPress" id="table" growing="true" growingThreshold="50" class="sapUiSmallMargin">
+						<columns>
+							<Column >
+								<Text text="Image" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="Car Name" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="Color" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="Engine" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="Top Speed" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="Year" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="Cost" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<Image src="{myModel>image}" height="10%" width="100%"/>
+									<Text text="{myModel>CarName}" class="sapUiLargeMargin"/>
+									<ComboBox value="{i18n>select}" change="onSortTeam" class="sapUiLargeMargin">
+										<items >
+											<core:Item text="{myModel>Colors/0/Color1}" id="i1" key="runs"></core:Item>
+											<core:Item text="{myModel>Colors/0/Color2}" id="i2" key="avg"></core:Item>
+											<core:Item text="{myModel>Colors/0/Color3}" id="i3" key="wickets"></core:Item>
+											<core:Item text="{myModel>Colors/0/Color4}" key="year"></core:Item>
+										</items>
+									</ComboBox>
+									<Text text="{myModel>Engine}" class="sapUiLargeMargin"/>
+									<Text text="{myModel>TopSpeed}" class="sapUiLargeMargin"/>
+									<Text text="{myModel>Year}" class="sapUiLargeMargin"/>
+									<Text text="{myModel>Cost}" class="sapUiLargeMargin"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

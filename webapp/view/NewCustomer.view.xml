@@ -1,0 +1,63 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Showroom.CarShowroom.controller.NewCustomer"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:layout="sap.ui.layout" xmlns:f="sap.ui.layout.form" displayBlock="true" xmlns:l="sap.ui.layout">
+	<App>
+		<pages>
+			<Page title="Title" showHeader="false" showFooter="true" floatingFooter="true" enableScrolling="false">
+				<content>
+					<l:BlockLayout id="BlockLayoutTwo">
+						<l:BlockLayoutRow >
+							<l:BlockLayoutCell backgroundColorSet="ColorSet10"  backgroundColorShade="ShadeA" titleAlignment="Center"/>
+						</l:BlockLayoutRow >
+						<l:BlockLayoutRow >
+							<l:BlockLayoutCell backgroundColorSet="ColorSet10"  backgroundColorShade="ShadeA" titleAlignment="Center"/>
+						</l:BlockLayoutRow >
+						<l:BlockLayoutRow >
+							<!--<l:BlockLayoutCell backgroundColorSet="ColorSet10" backgroundColorShade="ShadeB" titleAlignment="Center"/>-->
+							<l:BlockLayoutCell id="cell-2" title="CUSTOMER DETAILS" backgroundColorSet="ColorSet5" backgroundColorShade="ShadeA" titleAlignment="Center">
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm editable="true" columnsM="2" columnsL="2" columnsXL="2">
+										<f:content>
+											<core:Title text="Customer Info."/>
+											<Label text="Name"/>
+											<Input placeholder="Name" id="i1" valueLiveUpdate="true" />
+											<Label text="Email"/>
+											<Input placeholder="Email" id="i2" valueLiveUpdate="true"/>
+											<Label text="Mobile No"/>
+											<Input placeholder="Mobile No." id="i3" valueLiveUpdate="true"/>
+											<Label text="Car Model"/>
+											<Input placeholder="Car Model" id="i4" valueLiveUpdate="true"/>
+											<Label text="Car No."/>
+											<Input placeholder="Car No." id="i5" valueLiveUpdate="true"/>
+											<Label text="Date"/>
+											<DatePicker placeholder="Enter Date" id="i6" change="handleChange" valueLiveUpdate="true"/>
+											<core:Title text="Service Details"/>
+											<Label text="Issue"/>
+											<Input placeholder="Issue" id="i7" valueLiveUpdate="true"/>
+											<Label text="Parts Replaced"/>
+											<Input id="i8" placeholder="Parts Replaced" showValueHelp="true" valueLiveUpdate="true"/>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</l:BlockLayoutCell>
+							<!--<l:BlockLayoutCell backgroundColorSet="ColorSet10" backgroundColorShade="ShadeA" titleAlignment="Center"/>-->
+						</l:BlockLayoutRow>
+						<l:BlockLayoutRow >
+							<l:BlockLayoutCell backgroundColorSet="ColorSet10"  backgroundColorShade="ShadeA" titleAlignment="Center"/>
+						</l:BlockLayoutRow >
+						<l:BlockLayoutRow >
+							<l:BlockLayoutCell backgroundColorSet="ColorSet10"  backgroundColorShade="ShadeA" titleAlignment="Center"/>
+						</l:BlockLayoutRow >
+					</l:BlockLayout>
+				</content>
+				<footer>
+							<Bar>
+								<contentRight>
+									<Button xmlns="sap.m" text="Cancel" type="Reject"  icon="sap-icon://cancel" press="onCancel" tooltip="Cancel"/>
+									<Button xmlns="sap.m" text="Save" type="Accept"  icon="sap-icon://save" press="onSave" tooltip="Save Data"/>
+								</contentRight>
+							</Bar>
+						</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
