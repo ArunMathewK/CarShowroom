@@ -1,5 +1,6 @@
 {
-	"Sales": [{
+	"Sales": [
+		{
 			"CarName": "Audi Q3",
 			"image": "https://st.motortrend.ca/uploads/sites/10/2016/06/2016-audi-q3-premium-plus-suv-angular-front.png",
 			"Colors": [{
@@ -11,7 +12,9 @@
 			"Engine": "1395 CC to 1968 CC",
 			"TopSpeed": "204KMPH",
 			"Year": "2018",
-			"Cost": "Rs. 34.73 lakh"
+			"Cost": "Rs. 34.73 lakh",
+			"CostCrore":"0.34",
+			"av":"Available"
 
 		}, {
 			"CarName": "Audi A4",
@@ -25,7 +28,9 @@
 			"Engine": "1395 CC to 1968 CC",
 			"TopSpeed": "210KMPH",
 			"Year": "1994",
-			"Cost": "Rs. 41.47 lakh"
+			"Cost": "Rs. 41.47 lakh",
+				"CostCrore":"0.41",
+					"av":"Available"
 
 		}, {
 			"CarName": "Audi A8",
@@ -39,7 +44,9 @@
 			"Engine": "2967 CC to 6299 CC",
 			"TopSpeed": "250KMPH",
 			"Year": "2002",
-			"Cost": "Rs. 1.23 crore"
+			"Cost": "Rs. 1.23 crore",
+				"CostCrore":"1.23",
+					"av":"Not Available"
 
 		}, {
 			"CarName": "Audi A3",
@@ -53,7 +60,9 @@
 			"Engine": "1395 CC to 1968 CC",
 			"TopSpeed": "224KMPH",
 			"Year": "2004",
-			"Cost": "Rs. 33.10 lakh"
+			"Cost": "Rs. 33.10 lakh",
+				"CostCrore":"0.33",
+					"av":"Not Available"
 
 		}, {
 			"CarName": "Audi R8",
@@ -67,7 +76,9 @@
 			"Engine": "5204 CC",
 			"TopSpeed": "330KMPH",
 			"Year": "2006",
-			"Cost": "Rs. 2.72 crore"
+			"Cost": "Rs. 2.72 crore",
+				"CostCrore":"2.72",
+					"av":"Available"
 
 		}, {
 			"CarName": "Audi RS6 Avant",
@@ -81,7 +92,9 @@
 			"Engine": "3993 CC",
 			"TopSpeed": "280KMPH",
 			"Year": "2015",
-			"Cost": "Rs. 1.46 crore"
+			"Cost": "Rs. 1.46 crore",
+				"CostCrore":"1.46",
+					"av":"Available"
 
 		}, {
 			"CarName": "Audi RS7",
@@ -95,7 +108,9 @@
 			"Engine": "3993 CC",
 			"TopSpeed": "250KMPH",
 			"Year": "2010",
-			"Cost": "Rs. 1.65 crore"
+			"Cost": "Rs. 1.65 crore",
+				"CostCrore":"1.65",
+					"av":"Available"
 
 		}, {
 			"CarName": "Audi S5",
@@ -109,7 +124,9 @@
 			"Engine": "2995 CC",
 			"TopSpeed": "250KMPH",
 			"Year": "2017",
-			"Cost": "Rs. 72.41 lakh"
+			"Cost": "Rs. 72.41 lakh",
+				"CostCrore":"0.72",
+					"av":"Available"
 
 		}
 
@@ -229,72 +246,412 @@
 		}
 
 	],
-	"eighteen": [{
+	"eighteen": [
+	{
 			"month": "Jan",
 			"SoldCar": "3",
-			"Price": "2.1"
+			"Price": "2.1",
+			"total":"6.1"
 
-		}, {
+		},
+		{
 			"month": "Feb",
 			"SoldCar": "4",
-			"Price": "3.1"
+			"Price": "3.1",
+			"total":"12.4"
 
-		}, {
+		},
+			{
 			"month": "Mar",
 			"SoldCar": "1",
-			"Price": "0.7"
+			"Price": "0.7",
+			"total":"0.7"
 
-		}, {
+		},
+			{
 			"month": "Apr",
 			"SoldCar": "3",
-			"Price": "2.1"
+			"Price": "2.1",
+			"total":"6.3"
 
-		}, {
+		},	{
 			"month": "May",
 			"SoldCar": "2",
-			"Price": "1.1"
+			"Price": "1.1",
+			"total":"2.2"
 
-		}, {
+		},	{
 			"month": "June",
 			"SoldCar": "4",
-			"Price": "2.8"
+			"Price": "2.8",
+			"total":"11.2"
 
-		}, {
+		},
+			{
 			"month": "Jul",
 			"SoldCar": "5",
-			"Price": "3.6"
+			"Price": "3.6",
+			"total":"18.0"
 
-		}, {
+		},
+			{
 			"month": "Aug",
 			"SoldCar": "3",
-			"Price": "2.1"
+			"Price": "2.1",
+			"total":"6.3"
 
-		}, {
+		},	{
 			"month": "Sep",
 			"SoldCar": "4",
-			"Price": "3.1"
+			"Price": "3.1",
+			"total":"12.4"
 
-		}, {
+		},	{
 			"month": "Oct",
 			"SoldCar": "5",
-			"Price": "4.1"
+			"Price": "4.1",
+			"total":"20.5"
 
-		}, {
+		},
+			{
 			"month": "Nov",
-			"SoldCar": "2",
-			"Price": "1.5"
+			"SoldCar": "0",
+			"Price": "0",
+			"total":"0"
 
-		}, {
+		},
+			{
+			"month": "Dec",
+			"SoldCar": "0",
+			"Price": "0",
+			"total":"0"
+
+		}
+		
+	],
+		"seventeen": [
+	{
+			"month": "Jan",
+			"SoldCar": "2",
+			"Price": "3.1",
+			"total":"6.2"
+
+		},
+		{
+			"month": "Feb",
+			"SoldCar": "5",
+			"Price": "5.1",
+			"total":"10.5"
+
+		},
+			{
+			"month": "Mar",
+			"SoldCar": "6",
+			"Price": "5.7",
+			"total":"34.2"
+
+		},
+			{
+			"month": "Apr",
+			"SoldCar": "3",
+			"Price": "2.1",
+			"total":"6.3"
+
+		},	{
+			"month": "May",
+			"SoldCar": "2",
+			"Price": "1.1",
+			"total":"2.2"
+
+		},	{
+			"month": "June",
+			"SoldCar": "4",
+			"Price": "3.8",
+			"total":"15.2"
+
+		},
+			{
+			"month": "Jul",
+			"SoldCar": "6",
+			"Price": "5.6",
+			"total":"33.6"
+
+		},
+			{
+			"month": "Aug",
+			"SoldCar": "3",
+			"Price": "2.1",
+			"total":"6.3"
+
+		},	{
+			"month": "Sep",
+			"SoldCar": "6",
+			"Price": "6.3",
+			"total":"37.8"
+
+		},	{
+			"month": "Oct",
+			"SoldCar": "2",
+			"Price": "2.4",
+			"total":"4.8"
+
+		},	{
+			"month": "Nov",
+			"SoldCar": "5",
+			"Price": "4.5",
+			"total":"22.5"
+
+		},	{
 			"month": "Dec",
 			"SoldCar": "2",
-			"Price": "1.7"
+			"Price": "1.7",
+			"total":"3.4"
 
+		}
+		
+	],
+		"sixteen": [
+	{
+			"month": "Jan",
+			"SoldCar": "2",
+			"Price": "3.1",
+			"total":"6.2"
+
+		},
+		{
+			"month": "Feb",
+			"SoldCar": "5",
+			"Price": "4.5",
+			"total":"22.5"
+
+		},
+			{
+			"month": "Mar",
+			"SoldCar": "2",
+			"Price": "1.7",
+			"total":"3.4"
+
+		},
+			{
+			"month": "Apr",
+			"SoldCar": "3",
+			"Price": "2.1",
+			"total":"6.3"
+
+		},	{
+			"month": "May",
+			"SoldCar": "3",
+			"Price": "1.1",
+			"total":"3.3"
+
+		},	{
+			"month": "June",
+			"SoldCar": "4",
+			"Price": "3.8",
+			"total":"15.2"
+
+		},
+			{
+			"month": "Jul",
+			"SoldCar": "4",
+			"Price": "3.6",
+			"total":"14.0"
+
+		},
+			{
+			"month": "Aug",
+			"SoldCar": "5",
+			"Price": "4.1",
+			"total":"20.5"
+
+		},	{
+			"month": "Sep",
+			"SoldCar": "3",
+			"Price": "3.1",
+			"total":"9.3"
+
+		},	{
+			"month": "Oct",
+			"SoldCar": "5",
+			"Price": "4.1",
+			"total":"20.5"
+
+		},	{
+			"month": "Nov",
+			"SoldCar": "6",
+			"Price": "4.5",
+			"total":"27.0"
+
+		},	{
+			"month": "Dec",
+			"SoldCar": "3",
+			"Price": "1.9",
+			"total":"5.7"
+
+		}
+		
+	],
+		"fifteen": [
+	{
+			"month": "Jan",
+			"SoldCar": "6",
+			"Price": "4.7",
+			"total":"28.2"
+
+		},
+		{
+			"month": "Feb",
+			"SoldCar": "4",
+			"Price": "3.1",
+			"total":"12.4"
+
+		},
+			{
+			"month": "Mar",
+			"SoldCar": "4",
+			"Price": "3.7",
+			"total":"14.8"
+
+		},
+			{
+			"month": "Apr",
+			"SoldCar": "3",
+			"Price": "3.1",
+			"total":"9.3"
+
+		},	{
+			"month": "May",
+			"SoldCar": "2",
+			"Price": "2.1",
+			"total":"4.2"
+
+		},	{
+			"month": "June",
+			"SoldCar": "4",
+			"Price": "3.8",
+			"total":"15.2"
+
+		},
+			{
+			"month": "Jul",
+			"SoldCar": "4",
+			"Price": "2.6",
+			"total":"10.4"
+
+		},
+			{
+			"month": "Aug",
+			"SoldCar": "3",
+			"Price": "3.1",
+			"total":"9.3"
+
+		},	{
+			"month": "Sep",
+			"SoldCar": "4",
+			"Price": "2.1",
+			"total":"8.4"
+
+		},	{
+			"month": "Oct",
+			"SoldCar": "5",
+			"Price": "3.1",
+			"total":"15.5"
+
+		},	{
+			"month": "Nov",
+			"SoldCar": "3",
+			"Price": "1.5",
+			"total":"4.5"
+
+		},	{
+			"month": "Dec",
+			"SoldCar": "0",
+			"Price": "0",
+			"total":"0"
+
+		}
+		
+	],
+	"Customer": [{
+			"Name": "Poornima",
+			"Email": "Abiabraham@gmail.com",
+			"MobileNo": "9744478366",
+			"CarModel": "Audi A6",
+			"CarNumber": "IN003",
+			"Date": "01/7/2018",
+			"Issue": "Light",
+			"PartsReplaced": "Fog Light"
+		}, {
+			"Name": "Sanju",
+			"Email": "sanju@gmail.com",
+			"MobileNo": "9846765436",
+			"CarModel": "Audi A3",
+			"CarNumber": "IN0098",
+			"Date": "07/10/2018",
+			"Issue": "Tier",
+			"PartsReplaced": "Tier"
+		}, {
+			"Name": "Jubin",
+			"Email": "jubin@gmail.com",
+			"MobileNo": "8122646213",
+			"CarModel": "Audi Q5",
+			"CarNumber": "IN0076",
+			"Date": "08/11/2018",
+			"Issue": "Frond Glassr",
+			"PartsReplaced": "Frond Glass"
+		}, {
+			"Name": "Basil",
+			"Email": "basil@gmail.com",
+			"MobileNo": "8374391907",
+			"CarModel": "Audi Q3",
+			"CarNumber": "IN0094",
+			"Date": "18/10/2018",
+			"Issue": "Breack Light",
+			"PartsReplaced": "Break Light"
+		}, {
+			"Name": "Sanal",
+			"Email": "sanal@gmail.com",
+			"MobileNo": "9846246513",
+			"CarModel": "Audi A4",
+			"CarNumber": "IN0076",
+			"Date": "24/09/2018",
+			"Issue": "Seat",
+			"PartsReplaced": "Seat"
+		}, {
+			"Name": "Snehesh",
+			"Email": "snehesh@gmail.com",
+			"MobileNo": "8547199836",
+			"CarModel": "Audi R8",
+			"CarNumber": "IN00987",
+			"Date": "03/11/2018",
+			"Issue": "Breack Light",
+			"PartsReplaced": "Break Light"
+		}, {
+			"Name": "Rahul",
+			"Email": "rahul@gmail.com",
+			"MobileNo": "9876567856",
+			"CarModel": "Audi S5",
+			"CarNumber": "IN0786",
+			"Date": "19/09/2018",
+			"Issue": "Bumber",
+			"PartsReplaced": "Bumber"
+		}, {
+			"Name": "Tovino",
+			"Email": "tovino@gmail.com",
+			"MobileNo": "9789765643",
+			"CarModel": "Audi A5",
+			"CarNumber": "IN00984",
+			"Date": "24/10/2018",
+			"Issue": "Side Mirror",
+			"PartsReplaced": "Side Mirror"
 		}
 
 	],
-	"Parts": [{
+	"Parts": [
+		{
 			"PartsName": "Wheel",
 			"Img": "",
+			"av":"available",
 			"Price": "Rs.10,816.84/-",
 			"AvailableColours": [{
 
@@ -307,6 +664,7 @@
 			"PartsName": "Brake Disc",
 			"Img": "",
 			"Price": "Rs.9,334.64/-",
+				"av":"available",
 			"AvailableColours": [{
 
 				"Color1": "White",
@@ -317,6 +675,7 @@
 			"PartsName": "Tail Light",
 			"Img": "",
 			"Price": "Rs.8,734/-",
+				"av":" not available",
 			"AvailableColours": [{
 
 				"Color1": "White",
@@ -328,6 +687,7 @@
 			"PartsName": "Floor Mats",
 			"Img": "",
 			"Price": "Rs.2,646/-",
+				"av":" not available",
 			"AvailableColours": [{
 
 				"Color1": "White",
@@ -338,6 +698,7 @@
 		}, {
 			"PartsName": "Bumper",
 			"Img": "",
+				"av":"available",
 			"Price": "Rs.7,453/-",
 			"AvailableColours": [{
 
@@ -349,6 +710,7 @@
 		}, {
 			"PartsName": "Headlight",
 			"Img": "",
+				"av":"not available",
 			"Price": "Rs.4,753/-",
 			"AvailableColours": [{
 
@@ -358,6 +720,7 @@
 		}, {
 			"PartsName": "Mirror",
 			"Img": "",
+				"av":"available",
 			"Price": "Rs.2,345/-",
 			"AvailableColours": [{
 
@@ -369,6 +732,7 @@
 		}, {
 			"PartsName": "Axle",
 			"Img": "",
+				"av":"not available",
 			"Price": "Rs.4,435/-",
 			"AvailableColours": [{
 
@@ -379,6 +743,7 @@
 		}, {
 			"PartsName": "Radiator",
 			"Img": "",
+				"av":"available",
 			"Price": "Rs.10,765/-",
 			"AvailableColours": [{
 
@@ -388,6 +753,7 @@
 		}, {
 			"PartsName": "Fog Light",
 			"Img": "",
+				"av":"available",
 			"Price": "Rs.4,435/-",
 			"AvailableColours": [{
 
@@ -397,6 +763,7 @@
 		}, {
 			"PartsName": "Door",
 			"Img": "",
+				"av":"available",
 			"Price": "Rs.35,999/-",
 			"AvailableColours": [{
 
@@ -409,6 +776,7 @@
 		}, {
 			"PartsName": "Axle",
 			"Img": "",
+				"av":"available",
 			"Price": "Rs.4,435/-",
 			"AvailableColours": [{
 

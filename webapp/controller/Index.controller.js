@@ -37,7 +37,18 @@ sap.ui.define([
 
 				MessageToast.show("Logedin Successfully");
 
-			} else if (ob1 === "") {
+			}
+			 else if (ob1 === "Production" && ob2 === "Production123") {
+				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+				oRouter.navTo("Pro");
+				this.getView().byId("psw").setValueState("None");
+				this.getView().byId("uid").setValueState("None");
+				this.getView().byId("psw").setValue("");
+				this.getView().byId("uid").setValue("");
+
+				MessageToast.show("Logedin Successfully");
+
+			}else if (ob1 === "") {
 
 				MessageToast.show("Enter the Usewr Name");
 				this.getView().byId("uid").setValueState("Error");

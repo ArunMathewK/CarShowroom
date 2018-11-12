@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:r="sap.suite.ui.commons" xmlns:core="sap.ui.core" xmlns:viz.data="sap.viz.ui5.data"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout">
+	<Dialog id="idCloseDialog8" title="" contentWidth="50%">
+	
+		<beginButton>
+			<Button text="Close" press="ocClosefrg8"/>
+		</beginButton>
+	</Dialog>
+</core:FragmentDefinition>

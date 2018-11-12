@@ -179,7 +179,7 @@
 						<footer>
 							<Bar>
 								<contentRight>
-									<Button xmlns="sap.m" text="New Customer?" id="addemp" value="p1" icon="sap-icon://add" press="addCustomer" tooltip="Add New Customer details here	"/>
+									<Button xmlns="sap.m" text="New Customer" id="addemp" value="p1" icon="sap-icon://add" press="addCustomer" tooltip="Add New Customer details here	"/>
 								</contentRight>
 							</Bar>
 						</footer>

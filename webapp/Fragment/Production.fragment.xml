@@ -1,0 +1,48 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+		<Dialog id="idCloseDialog101" title="Message to Production" contentWidth="50%">
+				<content>
+					<Toolbar>
+					
+						<ComboBox value="Select Car" change="onSortTeam" id="combo1">
+							<items >
+								<core:Item text="Audi Q3" id="i111"></core:Item>
+								<core:Item text="Audi A4" id="i222"></core:Item>
+								<core:Item text="Audi A8" id="i333"></core:Item>
+								<core:Item text="Audi A3" id="i444"></core:Item>
+									<core:Item text="Audi R8" id="i555"></core:Item>
+								<core:Item text="Audi RS6 Avant" id="i666"></core:Item>
+								<core:Item text="Audi RS7" id="i777"></core:Item>
+								<core:Item text="Audi S5" id="i888"></core:Item>
+							</items>
+						</ComboBox>
+						<Text text="Required"></Text>
+						<!--<Button text="graph" press="graph"></Button>-->
+					</Toolbar>
+					</content>
+				<beginButton>
+			<Button text="Send" press="ocClosefrg2"/>
+		</beginButton>
+	</Dialog>
+	<!--<SelectDialog-->
+	<!--	noDataText="No Products Found"-->
+	<!--	title="Select Product"-->
+	<!--	search="handleSearch"-->
+	<!--	confirm="handleClose"-->
+	<!--	cancel="handle"-->
+	<!--	items="{-->
+	<!--	path:'myModel>/Production'-->
+	<!--	}"-->
+	<!--	id="list"-->
+	<!--	>-->
+		<!--<List id="list" >-->
+	<!--					<items >-->
+	<!--						<ObjectListItem title="{myModel>CarName}" icon="{myModel>image}"   type="Active" >-->
+								
+	<!--						</ObjectListItem>-->
+	<!--					</items>-->
+					<!--</List>-->
+		
+	<!--</SelectDialog>-->
+</core:FragmentDefinition>

@@ -101,6 +101,16 @@
 					"name": "NewCustomer",
 					"pattern": "NewCustomerptn ",
 					"target": "NewCustomer"
+				},
+					{
+					"name": "Pro",
+					"pattern": "Production ",
+					"target": "Production"
+				},
+				{
+					"name": "Bill",
+					"pattern": "bill/{carname}/{amount}/{crore}/{stock} ",
+					"target": "Bills"
 				}
 			],
 			"targets": {
@@ -144,6 +154,15 @@
 					"controlAggregation": "pages",
 					"controlId": "idAppControl",
 					"clearControlAggregation": false
+				},
+				"Bills": {
+					"viewType": "XML",
+					"viewName": "Bills",
+					"controlId": "idAppControl"
+				},
+				"Production": {
+					"viewType": "XML",
+					"viewName": "Production"
 				}
 			}
 		}

@@ -1,26 +1,165 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Showroom.CarShowroom.controller.Sales"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:tnt="sap.tnt" displayBlock="true">
-	<App>
-		<pages>
-			<Page >
-				<headerContent >
-					<tnt:ToolHeader >
-						<Image src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c46b.png" class="logoimage"/>
-						<ToolbarSpacer/>
-						<Button type="Reject" icon="sap-icon://log" press="logOut" />
-					</tnt:ToolHeader>
-				</headerContent>
-				<content>
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" displayBlock="true" xmlns:f="sap.ui.layout.form" xmlns:tnt="sap.tnt"
+	xmlns:r="sap.suite.ui.commons" xmlns:viz.data="sap.viz.ui5.data" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout">
+		<tnt:ToolHeader >
+		<Image id="abc22" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c46b.png" class="logoimage"/>
+		<ToolbarSpacer/>
+		<Text text="SHOWROOM NAME"/>
+		<ToolbarSpacer/>
+		<Button type="Reject" tooltip="LogOut" icon="sap-icon://log" press="logOut"/>
+	</tnt:ToolHeader>
+	<VBox enableScrolling="false">
+		<HBox class="sapUiMediumMarginBeginEnd VBox">
+			<GenericTile class="sapUiMediumMarginBeginEnd sapUiSmallMarginBottom sapUiSmallMarginTop" header="Dash Board" subheader="" press="handleNav"
+				backgroundImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNabW499LkB47qkeHPVgDomCBgJzMsLxeBpLg81vbDZxcbeo7f3A">
+				<TileContent footer=" ">
+					<!--<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>-->
+					<NewsContent contentText="DASH-BOARD"/>
+				</TileContent>
+				<customData>
+					<core:CustomData key="target" value="p1"/>
+				</customData>
+			</GenericTile>
+			<GenericTile class="sapUiMediumMarginBeginEnd sapUiSmallMarginBottom sapUiSmallMarginTop" header=" " subheader="" press="handleNav"
+				backgroundImage="data:image/png;base64,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">
+				<TileContent>
+					<NewsContent contentText="CAR INVENTORY"/>
+					<!--<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>-->
+				</TileContent>
+				<customData>
+					<core:CustomData key="target" value="p2"/>
+				</customData>
+			</GenericTile>
+			<GenericTile class="sapUiMediumMarginBeginEnd sapUiSmallMarginBottom sapUiSmallMarginTop" header="" subheader="" press="handleNav"
+				backgroundImage="http://comps.canstockphoto.com/can-stock-photo_csp16179817.jpg">
+				<TileContent footer=" ">
+					<!--<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>-->
+					<NewsContent contentText="CUSTOMER INFORMATION"/>
+				</TileContent>
+				<customData>
+					<core:CustomData key="target" value="p3"/>
+				</customData>
+			</GenericTile>
+			<GenericTile class="sapUiMediumMarginBeginEnd sapUiSmallMarginBottom sapUiSmallMarginTop" header=" " subheader=" " press="handleNav"
+				backgroundImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXf90OuoCu7vUiRUALiCFct80KKE1ZCI--SjN3CMeaVWmWaRVRcQ">
+				<TileContent>
+					<NewsContent contentText="TRANSACTION"/>
+					<!--<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>-->
+				</TileContent>
+				<customData>
+					<core:CustomData key="target" value="p4"/>
+				</customData>
+			</GenericTile>
+			<!--<Button class="sapUiMediumMarginBeginEnd sapUiTinyMarginTop tileLayout" type="Reject" tooltip="LogOut" icon="sap-icon://log" press="logOut"/>-->
+		</HBox>
+		<HBox visible="false">
+			<Button text="Back" type="Back" press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1"/>
+				</layoutData>
+			</Button>
+			<Select id="animationSelect">
+				<core:Item text="Slide animation" key="slide"/>
+				<core:Item text="Fade animation" key="fade"/>
+				<core:Item text="Flip animation" key="flip"/>
+				<core:Item text="Show animation" key="show"/>
+				<layoutData>
+					<FlexItemData growFactor="1"/>
+				</layoutData>
+			</Select>
+		</HBox>
+		<NavContainer id="navCon" width="100%" height="33em" class="navContainerControl sapUiSmallMarginBottom" enableScrolling="false">
+			<Page id="p1" title="Dash Board" floatingFooter="true" showHeader="false" enableScrolling="false">
+				<l:BlockLayout id="BlockLayoutTwo">
+					<l:BlockLayoutRow>
+						<!--<l:BlockLayoutCell id="cell-1" title="NOVEMBER TRANSACTION" backgroundColorSet="ColorSet5" backgroundColorShade="ShadeA"-->
+						<!--	titleAlignment="Center">-->
+						<!--	<Text text=""/>-->
+						<!--</l:BlockLayoutCell>-->
+						<l:BlockLayoutCell id="cell-2" title="TRANSACTION 2018" backgroundColorSet="ColorSet5" backgroundColorShade="ShadeB" titleAlignment="Center">
+							<core:Icon src=" "/>
+						</l:BlockLayoutCell>
+						<l:BlockLayoutCell id="cell-3" title="ALL TRANSACTION" backgroundColorSet="ColorSet5" backgroundColorShade="ShadeC" titleAlignment="Center">
+							<core:Icon src=" "/>
+						</l:BlockLayoutCell>
+					</l:BlockLayoutRow>
+					<l:BlockLayoutRow>
+						<!--<l:BlockLayoutCell id="cell-4" title=" " backgroundColorSet="ColorSet11" backgroundColorShade="ShadeD" titleAlignment="Center">-->
+						<!--	<viz:VizFrame id="idVizFrame1" height="320px" width="400px" class="sapUiHugeMarginEnda" vizType='column'-->
+						<!--		vizProperties="{title:{visible:false}}">-->
+						<!--		<viz:dataset>-->
+						<!--			<viz.data:FlattenedDataset id="idGraph1" data="">-->
+						<!--				<viz.data:dimensions>-->
+						<!--					<viz.data:DimensionDefinition name="year" value="{myModel>year}"/>-->
+						<!--				</viz.data:dimensions>-->
+						<!--				<viz.data:measures>-->
+						<!--					<viz.data:MeasureDefinition name="Servive Done" value="{myModel>No: Of servive}"/>-->
+						<!--				</viz.data:measures>-->
+						<!--			</viz.data:FlattenedDataset>-->
+						<!--		</viz:dataset>-->
+						<!--		<viz:feeds>-->
+						<!--			<viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure" values="Servive Done"/>-->
+						<!--			<viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension" values="year"/>-->
+						<!--		</viz:feeds>-->
+						<!--	</viz:VizFrame>-->
+						<!--	<ToolbarSpacer/>-->
+						<!--</l:BlockLayoutCell>-->
+						<l:BlockLayoutCell id="cell-5" title=" " backgroundColorSet="ColorSet11" backgroundColorShade="ShadeC" titleAlignment="Center">
+							<!--<core:Icon src=" "/>-->
+							<viz:VizFrame id="idVizFrame2" height="320px" class="sapUiHugeMarginEnda" width="600px" vizType='pie'
+								vizProperties="{title:{visible:false}}">
+								<viz:dataset>
+									<viz.data:FlattenedDataset id="idGraph2" data="{myModel>/Eighteen}">
+										<viz.data:dimensions>
+											<viz.data:DimensionDefinition name="Month" value="{myModel>month}"/>
+										</viz.data:dimensions>
+										<viz.data:measures>
+											<viz.data:MeasureDefinition name="Total" value="{myModel>total}"/>
+										</viz.data:measures>
+									</viz.data:FlattenedDataset>
+								</viz:dataset>
+								<viz:feeds>
+									<viz.feeds:FeedItem uid="size" type="Measure" values="Total"/>
+									<viz.feeds:FeedItem uid="color" type="Dimension" values="Month"/>
+								</viz:feeds>
+							</viz:VizFrame>
+						</l:BlockLayoutCell>
+						<l:BlockLayoutCell id="cell-6" title=" " backgroundColorSet="ColorSet11" backgroundColorShade="ShadeD" titleAlignment="Center">
+							<!--<core:Icon src=" "/>-->
+							<viz:VizFrame id="idVizFrame3" height="320px" width="600px" class="sapUiHugeMarginEnda" vizType='column'
+								vizProperties="{title:{visible:false}}">
+								<viz:dataset>
+									<viz.data:FlattenedDataset id="idGraph3" data="{myModel>/AllTransaction}">
+										<viz.data:dimensions>
+											<viz.data:DimensionDefinition name="year" value="{myModel>year}"/>
+										</viz.data:dimensions>
+										<viz.data:measures>
+											<viz.data:MeasureDefinition name="Profit" value="{myModel>Profit}"/>
+										</viz.data:measures>
+									</viz.data:FlattenedDataset>
+								</viz:dataset>
+								<viz:feeds>
+									<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Profit"/>
+									<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="year"/>
+								</viz:feeds>
+							</viz:VizFrame>
+						</l:BlockLayoutCell>
+					</l:BlockLayoutRow>
+				</l:BlockLayout>
+			</Page>
+		
+
+			<Page id="p2" title="Service Details" floatingFooter="true" showHeader="false" enableScrolling="true">
+					<content>
 					<Toolbar>
 						<ToolbarSpacer/>
-						<Button text="Transaction" press="Transaction"/>
-						<Button text="Production" press="Production" id="helloDialogButton"/>
 						<SearchField liveChange="onSearch" id="list1" width="40%"/>
 					</Toolbar>
-					<Table items="{myModel>/Sales}"   itemPress="onItemPress" id="table" growing="true" growingThreshold="50" class="sapUiSmallMargin">
+					<Table items="{myModel>/Sales}" itemPress="onItemPress" id="table" growing="true" growingThreshold="50" class="sapUiSmallMargin">
 						<columns>
 							<Column >
-								<Text text="Image" class="sapUiLargeMarginBeginEnd"/>
+								<Text text="Image" class="sapUiLargeMarginBegin"/>
 							</Column>
 							<Column demandPopin="true" minScreenWidth="Tablet">
 								<Text text="Car Name" class="sapUiLargeMarginBeginEnd"/>
@@ -40,13 +179,16 @@
 							<Column demandPopin="true" minScreenWidth="Tablet">
 								<Text text="Cost" class="sapUiLargeMarginBeginEnd"/>
 							</Column>
+								<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="Stock" class="sapUiLargeMarginBeginEnd"/>
+							</Column>
 						</columns>
 						<items>
 							<ColumnListItem type="Active">
 								<cells>
 									<Image src="{myModel>image}" height="10%" width="100%"/>
 									<Text text="{myModel>CarName}" class="sapUiLargeMargin"/>
-									<ComboBox value="{i18n>select}" change="onSortTeam" class="sapUiLargeMargin">
+									<ComboBox value="Select Color" change="onSortTeam" class="sapUiLargeMargin">
 										<items >
 											<core:Item text="{myModel>Colors/0/Color1}" id="i1" key="runs"></core:Item>
 											<core:Item text="{myModel>Colors/0/Color2}" id="i2" key="avg"></core:Item>
@@ -58,12 +200,282 @@
 									<Text text="{myModel>TopSpeed}" class="sapUiLargeMargin"/>
 									<Text text="{myModel>Year}" class="sapUiLargeMargin"/>
 									<Text text="{myModel>Cost}" class="sapUiLargeMargin"/>
+										<Text text="{myModel>av}" class="sapUiLargeMargin"/>
 								</cells>
 							</ColumnListItem>
 						</items>
 					</Table>
 				</content>
+				<footer>
+					<Bar class="sapUiStdFooter">
+						<contentRight>
+							<Button class="sapUiSmallMarginBottom" type="Ghost" text="CHECK PRODUCTION" press="oProduction" tooltip="Check Car in Production"
+								icon="sap-icon://check-availability"></Button>
+						</contentRight>
+					</Bar>
+				</footer>
+				<!--<SplitContainer>-->
+				<!--	<masterPages >-->
+				<!--		<Page title="Master" backgroundDesign="Solid" showHeader="false" enableScrolling="true" floatingFooter="true">-->
+				<!--			<SearchField liveChange="onCustomerSearch"></SearchField>-->
+				<!--			<List id="idCustomerdetails" items="{path:'myModel>/CustomerServiceDetails',sorter:{path : 'Name'}}" itemPress="item" mode="Delete"-->
+				<!--				delete="onDelete" updateFinished="Updated" includeItemInSelection="true" press="">-->
+				<!--				<items>-->
+				<!--					<ObjectListItem title="{myModel>Name}" type="Active" selected="true">-->
+				<!--						<firstStatus>-->
+				<!--							<ObjectStatus text="{myModel>Status}" state="{= ${myModel>Status} ==='Service Done' ? 'Success' : 'Error' }"/>-->
+				<!--						</firstStatus>-->
+				<!--						<attributes>-->
+				<!--							<ObjectAttribute text="Car No:{myModel>CarNumber}"/>-->
+				<!--							<ObjectAttribute text="Issue:{myModel>Issue}"/>-->
+				<!--						</attributes>-->
+				<!--					</ObjectListItem>-->
+				<!--				</items>-->
+				<!--			</List>-->
+				<!--			<footer>-->
+				<!--				<Bar>-->
+				<!--					<contentRight>-->
+				<!--						<Button xmlns="sap.m" text="New Customer?" id="addemp" value="p1" icon="sap-icon://add" press="addCustomer"-->
+				<!--							tooltip="Add New Customer details here "/>-->
+				<!--					</contentRight>-->
+				<!--				</Bar>-->
+				<!--			</footer>-->
+				<!--		</Page>-->
+				<!--	</masterPages>-->
+				<!--	<detailPages>-->
+				<!--		<Page title="Detail" backgroundDesign="Solid" showHeader="false" enableScrolling="true" floatingFooter="true">-->
+				<!--			<VBox class="sapUiSmallMargin">-->
+				<!--				<f:SimpleForm editable="true" columnsM="2" columnsL="2" columnsXL="2">-->
+				<!--					<f:content>-->
+				<!--						<core:Title text="Customer Info."/>-->
+				<!--						<Label text="Name"/>-->
+				<!--						<Input placeholder="Name" editable="{jmodel>/editable}" value="{myModel>/Panel/Name}"/>-->
+				<!--						<Label text="Email"/>-->
+				<!--						<Input placeholder="Email" editable="{jmodel>/editable}" value="{myModel>/Panel/Email}"/>-->
+				<!--						<Label text="Mobile No"/>-->
+				<!--						<Input placeholder="Mobile No." editable="{jmodel>/editable}" value="{myModel>/Panel/MobileNo}"/>-->
+				<!--						<Label text="Car Model"/>-->
+				<!--						<Input placeholder="Car Model" editable="{jmodel>/editable}" value="{myModel>/Panel/CarModel}"/>-->
+				<!--						<Label text="Car No."/>-->
+				<!--						<Input placeholder="Car No." editable="{jmodel>/editable}" value="{myModel>/Panel/CarNumber}"/>-->
+				<!--						<Label text="Date"/>-->
+				<!--						<DatePicker placeholder="Enter Date" change="handleChange" editable="{jmodel>/editable}" value="{myModel>/Panel/Date}"/>-->
+				<!--						<core:Title text="Service Details"/>-->
+				<!--						<Label text="Issue"/>-->
+				<!--						<Input placeholder="Issue" editable="{jmodel>/editable}" value="{myModel>/Panel/Issue}"/>-->
+				<!--						<Label text="Parts Replaced"/>-->
+				<!--						<MultiInput id="multiInput" placeholder="Parts Replaced" showValueHelp="true" editable="{jmodel>/editable}"-->
+				<!--							value="{myModel>/Panel/PartsReplaced}"/>-->
+				<!--						<Label text="Status"/>-->
+										<!--<Input placeholder="Issue" editable="{jmodel>/editable}" value="{myModel>/Panel/Status}"/>-->
+				<!--						<ComboBox items="" value="{myModel>/Panel/Status}" editable="{jmodel>/editable}">-->
+				<!--							<core:Item key="Service Done" text="Service Done"/>-->
+				<!--							<core:Item key="On Process" text="On Process"/>-->
+				<!--						</ComboBox>-->
+				<!--					</f:content>-->
+				<!--				</f:SimpleForm>-->
+				<!--			</VBox>-->
+				<!--			<footer>-->
+				<!--				<Bar>-->
+				<!--					<contentRight>-->
+				<!--						<Button xmlns="sap.m" type="Ghost" text="Edit" id="editBtn" icon="sap-icon://action" press="Edit" tooltip="edit"/>-->
+				<!--						<Button xmlns="sap.m" type="Accept" text="Save" id="savebtn" visible="false" tooltip="Save" press="Save" icon="sap-icon://save"-->
+				<!--							class="sapUiSmallMarginEnd"/>-->
+				<!--						<Button xmlns="sap.m" type="Reject" text="Cancel" id="cancelbtn" visible="false" icon="sap-icon://cancel" press="Cancel" tooltip="Cancel"/>-->
+				<!--					</contentRight>-->
+				<!--				</Bar>-->
+				<!--			</footer>-->
+				<!--		</Page>-->
+				<!--	</detailPages>-->
+				<!--</SplitContainer>-->
+				<!--<footer>-->
+				<!--	<Bar class="sapUiStdFooter">-->
+				<!--		<contentRight>-->
+				<!--			<Button xmlns="sap.m" type="Reject" text="CANCEL" id="addemp" icon="sap-icon://sys-cancel" tooltip="Camcel the item"/>-->
+				<!--			<Button xmlns="sap.m" type="Accept" text="SAVE" id="addemp1" icon="sap-icon://save" tooltip="Camcel the item"/>-->
+				<!--		</contentRight>-->
+				<!--	</Bar>-->
+				<!--</footer>-->
 			</Page>
-		</pages>
-	</App>
+			<Page id="p3" title="Service Details" floatingFooter="true" showHeader="false" enableScrolling="false">
+				<SplitContainer>
+				<masterPages >
+					<Page title="Master" backgroundDesign="Solid" showHeader="false" enableScrolling="true" floatingFooter="true">
+						<SearchField liveChange="onCustomerSearch" ></SearchField>
+						<List id="idCustomerdetails" items="{path:'myModel>/Customer',sorter:{path : 'Name'}}" itemPress="item"  delete="onDelete" updateFinished="Updated"
+							includeItemInSelection="true" press="" >
+							<items>
+								<ObjectListItem title="{myModel>Name}"  type="Active"  selected="true" >
+									<attributes>
+										<ObjectAttribute text="Car No:{myModel>CarModel}"  />
+										<ObjectAttribute text="Issue:{myModel>MobileNo}"  />
+									</attributes>
+								</ObjectListItem>
+							</items>
+						</List>
+					<footer><Bar></Bar></footer>
+					</Page>
+				</masterPages>
+				<detailPages>
+					<Page title="Detail" backgroundDesign="Solid" showHeader="false" enableScrolling="true" floatingFooter="true">
+					<VBox class="sapUiSmallMargin">
+					<f:SimpleForm editable="true" columnsM="2" columnsL="2" columnsXL="2" class="sapUiLargeMarginBegin">
+						<f:content>
+							<core:Title text="Customer Info."/>
+							<Label text="Name"/>
+							<Text text="{myModel>/Panel/Name}"/>
+							<!--<Input placeholder="Name" editable="{jmodel>/editable}" value="{myModel>/Panel/Name}" />-->
+							<Label text="Email"/>
+							<Text text="{myModel>/Panel/Email}" />
+							<Label text="Mobile No"/>
+							<Text text="{myModel>/Panel/MobileNo}" />
+							<Label text="Car Model"/>
+							<Text text="{myModel>/Panel/CarModel}" />
+							
+							<Label text="Date"/>
+							<Text text ="{myModel>/Panel/Date}"/>
+						
+							
+						</f:content>
+					</f:SimpleForm>
+			    	</VBox>
+							<footer>
+								<Bar>
+								<!--<contentRight>-->
+								<!--		<Button xmlns="sap.m" type="Ghost" text="Edit" id="editBtn" icon="sap-icon://action" press="Edit" tooltip="edit"/>-->
+								<!--	    <Button xmlns="sap.m" type="Accept" text="Save" id="savebtn" visible="false" tooltip="Save" press="Save" icon="sap-icon://save" class="sapUiSmallMarginEnd"/>-->
+								<!--     	<Button xmlns="sap.m" type="Reject" text="Cancel" id="cancelbtn" visible="false" icon="sap-icon://cancel" press="Cancel" tooltip="Cancel"/>-->
+								<!--</contentRight>-->
+							</Bar>
+						</footer>
+					</Page>
+				</detailPages>
+			</SplitContainer>
+			</Page>
+			<Page id="p4" title="Parts Available" floatingFooter="true" showHeader="false">
+				<content>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<ComboBox value="2018" change="onSortTeam" id="combo">
+							<items >
+								<core:Item text="2015" id="i11"></core:Item>
+								<core:Item text="2016" id="i22"></core:Item>
+								<core:Item text="2017" id="i33"></core:Item>
+								<core:Item text="2018" id="i44"></core:Item>
+							</items>
+						</ComboBox>
+						<!--<Button text="graph" press="graph"></Button>-->
+					</Toolbar>
+					<Table items="{myModel>/Eighteen}" itemPress="onItemPress1" id="table10" growing="true" growingThreshold="50">
+						<columns>
+							<Column >
+								<Text text="Month"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="No. of car sold/month"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="Car Prise Rs.(Crore)"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="Total Amount Rs.(Crore)"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<Text text="{myModel>month}"/>
+									<Text text="{myModel>SoldCar}"/>
+									<Text text="{myModel>Price}"/>
+									<Text text="{myModel>total}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+				<footer>
+					<Bar class="sapUiStdFooter">
+						<contentRight>
+							<!--<Button xmlns="sap.m" type="Accept" text="BOOK" id="addemp5" icon="sap-icon://add" tooltip="Book the item"/>-->
+							<!--<Button xmlns="sap.m" class="sapUiSmallMarginBottom" press="" text=""-->
+							<!-- />-->
+							<Button class="sapUiSmallMarginBottom" type="Ghost" text="GRAPH" press="graph" tooltip="Graphical representation of Yearly Transaction"
+								icon="sap-icon://bar-chart">
+								<customData>
+									<core:CustomData key="multi" value="true"/>
+								</customData>
+							</Button>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		
+			</NavContainer>
+		</VBox>
+	<!--<App>-->
+	<!--	<pages>-->
+	<!--		<Page >-->
+	<!--			<headerContent >-->
+	<!--				<tnt:ToolHeader >-->
+	<!--					<Image src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c46b.png" class="logoimage"/>-->
+	<!--					<ToolbarSpacer/>-->
+	<!--					<Button type="Reject" icon="sap-icon://log" press="logOut" />-->
+	<!--				</tnt:ToolHeader>-->
+	<!--			</headerContent>-->
+	<!--			<content>-->
+	<!--				<Toolbar>-->
+	<!--					<ToolbarSpacer/>-->
+	<!--					<Button text="Transaction" press="Transaction"/>-->
+	<!--					<Button text="Production" press="Production" id="helloDialogButton"/>-->
+	<!--					<SearchField liveChange="onSearch" id="list1" width="40%"/>-->
+	<!--				</Toolbar>-->
+	<!--				<Table items="{myModel>/Sales}"   itemPress="onItemPress" id="table" growing="true" growingThreshold="50" class="sapUiSmallMargin">-->
+	<!--					<columns>-->
+	<!--						<Column >-->
+	<!--							<Text text="Image" class="sapUiLargeMarginBeginEnd"/>-->
+	<!--						</Column>-->
+	<!--						<Column demandPopin="true" minScreenWidth="Tablet">-->
+	<!--							<Text text="Car Name" class="sapUiLargeMarginBeginEnd"/>-->
+	<!--						</Column>-->
+	<!--						<Column demandPopin="true" minScreenWidth="Tablet">-->
+	<!--							<Text text="Color" class="sapUiLargeMarginBeginEnd"/>-->
+	<!--						</Column>-->
+	<!--						<Column demandPopin="true" minScreenWidth="Tablet">-->
+	<!--							<Text text="Engine" class="sapUiLargeMarginBeginEnd"/>-->
+	<!--						</Column>-->
+	<!--						<Column demandPopin="true" minScreenWidth="Tablet">-->
+	<!--							<Text text="Top Speed" class="sapUiLargeMarginBeginEnd"/>-->
+	<!--						</Column>-->
+	<!--						<Column demandPopin="true" minScreenWidth="Tablet">-->
+	<!--							<Text text="Year" class="sapUiLargeMarginBeginEnd"/>-->
+	<!--						</Column>-->
+	<!--						<Column demandPopin="true" minScreenWidth="Tablet">-->
+	<!--							<Text text="Cost" class="sapUiLargeMarginBeginEnd"/>-->
+	<!--						</Column>-->
+	<!--					</columns>-->
+	<!--					<items>-->
+	<!--						<ColumnListItem type="Active">-->
+	<!--							<cells>-->
+	<!--								<Image src="{myModel>image}" height="10%" width="100%"/>-->
+	<!--								<Text text="{myModel>CarName}" class="sapUiLargeMargin"/>-->
+	<!--								<ComboBox value="{i18n>select}" change="onSortTeam" class="sapUiLargeMargin">-->
+	<!--									<items >-->
+	<!--										<core:Item text="{myModel>Colors/0/Color1}" id="i1" key="runs"></core:Item>-->
+	<!--										<core:Item text="{myModel>Colors/0/Color2}" id="i2" key="avg"></core:Item>-->
+	<!--										<core:Item text="{myModel>Colors/0/Color3}" id="i3" key="wickets"></core:Item>-->
+	<!--										<core:Item text="{myModel>Colors/0/Color4}" key="year"></core:Item>-->
+	<!--									</items>-->
+	<!--								</ComboBox>-->
+	<!--								<Text text="{myModel>Engine}" class="sapUiLargeMargin"/>-->
+	<!--								<Text text="{myModel>TopSpeed}" class="sapUiLargeMargin"/>-->
+	<!--								<Text text="{myModel>Year}" class="sapUiLargeMargin"/>-->
+	<!--								<Text text="{myModel>Cost}" class="sapUiLargeMargin"/>-->
+	<!--							</cells>-->
+	<!--						</ColumnListItem>-->
+	<!--					</items>-->
+	<!--				</Table>-->
+	<!--			</content>-->
+	<!--		</Page>-->
+	<!--	</pages>-->
+	<!--</App>-->
 </mvc:View>
