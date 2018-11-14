@@ -1,0 +1,58 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Showroom.CarShowroom.controller.Inventory"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Toolbar>
+						<ToolbarSpacer/>
+		<ComboBox  change="onSortTeam" items= "" selectedKey = "{myModel>/Colors/0/key}">
+										<items>
+											<core:Item text="sales" id="i1" key=""></core:Item>
+												<core:Item text="service" id="i2" key=""></core:Item>
+										</items>
+									</ComboBox>	</Toolbar>
+	<Table items="{myModel>/Sales}" itemPress="onItemPress" id="table" growing="true" growingThreshold="50" class="sapUiSmallMargin">
+						<columns>
+							<Column >
+								<Text text="Image" />
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="Car Name" />
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet" width = "12rem">
+								<Text text="Avilable Color" />
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center" width = "12rem">
+								<Text text="Engine" />
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="Top Speed" />
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center">
+								<Text text="Year" />
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center" width = "8rem">
+								<Text text="Cost" />
+							</Column>
+								<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center" width = "8rem">
+								<Text text="Stock" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<Image src="{myModel>image}" height="3rem" width="5rem"/>
+									<Text text="{myModel>CarName}" class="sapUiSmallMargin"/>
+									<ComboBox value="Select Color" change="onSortTeam" items= "{myModel>/Colors}" selectedKey = "{myModel>/Colors/0/key}">
+										<items>
+											<core:Item text="{myModel>Color}" id="i11" key="{myModel>key}"></core:Item>
+										</items>
+									</ComboBox>
+									<Text text="{myModel>Engine}" class="sapUiSmallMargin" />
+									<Text text="{myModel>TopSpeed}" class="sapUiSmallMargin" />
+									<Text text="{myModel>Year}" class="sapUiSmallMargin"/>
+									<Text text="{myModel>Cost}" class="sapUiSmallMargin"/>
+										<!--<Text text="{myModel>av}" class="sapUiSmallMargin" />-->
+									<core:Icon src = "sap-icon://warning" color = "{path:'myModel>av', formatter:'.formatter.statusAvilable'}" class="sapUiSmallMargin"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+</mvc:View>

@@ -102,10 +102,20 @@
 					"pattern": "NewCustomerptn ",
 					"target": "NewCustomer"
 				},
-					{
+				{
 					"name": "Pro",
 					"pattern": "Production ",
 					"target": "Production"
+				},
+				{
+					"name": "Notification",
+					"pattern": "Notification ",
+					"target": "Notification"
+				},
+					{
+					"name": "inventory",
+					"pattern": "inventory ",
+					"target": "Inventory"
 				},
 				{
 					"name": "Bill",
@@ -162,7 +172,18 @@
 				},
 				"Production": {
 					"viewType": "XML",
-					"viewName": "Production"
+					"viewName": "Production",
+					"controlId": "idAppControl"
+				},
+				"Notification": {
+					"viewType": "XML",
+					"viewName": "Notification",
+					"controlId": "idAppControl"
+				},
+				"Inventory": {
+					"viewType": "XML",
+					"viewName": "Inventory",
+						"controlId": "idAppControl"
 				}
 			}
 		}

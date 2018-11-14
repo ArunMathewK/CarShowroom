@@ -30,7 +30,7 @@
 			"Year": "1994",
 			"Cost": "Rs. 41.47 lakh",
 				"CostCrore":"0.41",
-					"av":"Available"
+					"av":" Not Available"
 
 		}, {
 			"CarName": "Audi A8",
@@ -1138,6 +1138,53 @@
 			"Date": "24/10/2018",
 			"Issue": "Side Mirror",
 			"PartsReplaced": "Side Mirror"
+		}
+
+	],
+		"FullTranscation": [{
+		"year": "2018",
+		"solCar": "40",
+		"totalAmount": 22.5
+	}, {
+		"year": "2017",
+		"solCar": "40",
+		"totalAmount": 40.6
+	}, {
+		"year": "2016",
+		"solCar": "40",
+		"totalAmount": 67.9
+	}, {
+		"year": "2015",
+		"solCar": "40",
+		"totalAmount": 52.0
+	}, {
+		"year": "2014",
+		"solCar": "40",
+		"totalAmount": 65.5
+
+	}],
+	"ProductionSales":[],
+		"notification": [{
+			"CarName": "Audi A6",
+			"Date": "01/12/2018",
+			"av": "Available",
+			"image": "https://st.motortrend.ca/uploads/sites/10/2016/06/2016-audi-q3-premium-plus-suv-angular-front.png",
+			"color": "Mythos Black"
+
+		}, {
+
+			"CarName": "Audi A3",
+			"av": "rejected",
+			"image": "https://s.aolcdn.com/commerce/autodata/images/USC70AUC017A021001.jpg",
+			"Date": "20/11/2018",
+			"color": "Moonshine Blue"
+		}, {
+
+			"CarName": "Audi S7",
+			"av": "Pending",
+			"image": "https://st.motortrend.ca/uploads/sites/10/2016/05/2016-audi-rs7-hatchback-angular-front-2.png",
+			"Date": "07/12/2018",
+			"color": "Palace Blue Pearl Eﬀect"
 		}
 
 	]

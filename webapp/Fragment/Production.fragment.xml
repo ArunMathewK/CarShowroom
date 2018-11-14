@@ -1,28 +1,27 @@
 <core:FragmentDefinition
 	xmlns="sap.m"
-	xmlns:core="sap.ui.core">
-		<Dialog id="idCloseDialog101" title="Message to Production" contentWidth="50%">
-				<content>
-					<Toolbar>
-					
-						<ComboBox value="Select Car" change="onSortTeam" id="combo1">
-							<items >
-								<core:Item text="Audi Q3" id="i111"></core:Item>
-								<core:Item text="Audi A4" id="i222"></core:Item>
-								<core:Item text="Audi A8" id="i333"></core:Item>
-								<core:Item text="Audi A3" id="i444"></core:Item>
-									<core:Item text="Audi R8" id="i555"></core:Item>
-								<core:Item text="Audi RS6 Avant" id="i666"></core:Item>
-								<core:Item text="Audi RS7" id="i777"></core:Item>
-								<core:Item text="Audi S5" id="i888"></core:Item>
-							</items>
-						</ComboBox>
-						<Text text="Required"></Text>
-						<!--<Button text="graph" press="graph"></Button>-->
-					</Toolbar>
-					</content>
-				<beginButton>
-			<Button text="Send" press="ocClosefrg2"/>
+	xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+		<Dialog id="idCloseDialog10" title="Request to Production" contentWidth="30%">
+		<f:SimpleForm editable="true" columnsM="2" columnsL="2" columnsXL="2">
+			<f:content >
+				<core:Title text=""/>
+				<Label text="Car Model"/>
+				<Input value="{myModel>/newCarModelValue}"/>
+				<Label text="Color"/>
+				<ComboBox items="" id="color" placeholder="select color">
+					<core:Item key="black" text="Mythos Black"/>
+					<core:Item key="red" text="Misano Red"/>
+					<core:Item key="blue" text="Hanian Blue"/>
+					<core:Item key="white" text="Cortina White"/>
+				</ComboBox>
+				<Label text="Delivery Date"/>
+				<DatePicker placeholder="Enter Date" dateValue = "{myModel>/todayDate}" id="date" change="handleChange"/>
+				<Label text="Address"/>
+				<Text id="address" text=" Bimal Auto Agency 22, 55, 3, Rajaji Nagar, Bengaluru, Karnataka 560010"/>
+			</f:content>
+		</f:SimpleForm>
+										<beginButton>
+			<Button text="send" press="ocClosefrg"/>
 		</beginButton>
 	</Dialog>
 	<!--<SelectDialog-->

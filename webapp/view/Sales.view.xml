@@ -159,48 +159,46 @@
 					<Table items="{myModel>/Sales}" itemPress="onItemPress" id="table" growing="true" growingThreshold="50" class="sapUiSmallMargin">
 						<columns>
 							<Column >
-								<Text text="Image" class="sapUiLargeMarginBegin"/>
+								<Text text="Image" />
 							</Column>
 							<Column demandPopin="true" minScreenWidth="Tablet">
-								<Text text="Car Name" class="sapUiLargeMarginBeginEnd"/>
+								<Text text="Car Name" />
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet" width = "12rem">
+								<Text text="Avilable Color" />
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center" width = "12rem">
+								<Text text="Engine" />
 							</Column>
 							<Column demandPopin="true" minScreenWidth="Tablet">
-								<Text text="Color" class="sapUiLargeMarginBeginEnd"/>
+								<Text text="Top Speed" />
 							</Column>
-							<Column demandPopin="true" minScreenWidth="Tablet">
-								<Text text="Engine" class="sapUiLargeMarginBeginEnd"/>
+							<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center">
+								<Text text="Year" />
 							</Column>
-							<Column demandPopin="true" minScreenWidth="Tablet">
-								<Text text="Top Speed" class="sapUiLargeMarginBeginEnd"/>
+							<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center" width = "8rem">
+								<Text text="Cost" />
 							</Column>
-							<Column demandPopin="true" minScreenWidth="Tablet">
-								<Text text="Year" class="sapUiLargeMarginBeginEnd"/>
-							</Column>
-							<Column demandPopin="true" minScreenWidth="Tablet">
-								<Text text="Cost" class="sapUiLargeMarginBeginEnd"/>
-							</Column>
-								<Column demandPopin="true" minScreenWidth="Tablet">
-								<Text text="Stock" class="sapUiLargeMarginBeginEnd"/>
+								<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center" width = "8rem">
+								<Text text="Stock" />
 							</Column>
 						</columns>
 						<items>
 							<ColumnListItem type="Active">
 								<cells>
-									<Image src="{myModel>image}" height="10%" width="100%"/>
-									<Text text="{myModel>CarName}" class="sapUiLargeMargin"/>
-									<ComboBox value="Select Color" change="onSortTeam" class="sapUiLargeMargin">
-										<items >
-											<core:Item text="{myModel>Colors/0/Color1}" id="i1" key="runs"></core:Item>
-											<core:Item text="{myModel>Colors/0/Color2}" id="i2" key="avg"></core:Item>
-											<core:Item text="{myModel>Colors/0/Color3}" id="i3" key="wickets"></core:Item>
-											<core:Item text="{myModel>Colors/0/Color4}" key="year"></core:Item>
+									<Image src="{myModel>image}" height="3rem" width="5rem"/>
+									<Text text="{myModel>CarName}" class="sapUiSmallMargin"/>
+									<ComboBox value="Select Color" change="onSortTeam" items= "{myModel>/Colors}" selectedKey = "{myModel>/Colors/0/key}">
+										<items>
+											<core:Item text="{myModel>Color}" id="i1" key="{myModel>key}"></core:Item>
 										</items>
 									</ComboBox>
-									<Text text="{myModel>Engine}" class="sapUiLargeMargin"/>
-									<Text text="{myModel>TopSpeed}" class="sapUiLargeMargin"/>
-									<Text text="{myModel>Year}" class="sapUiLargeMargin"/>
-									<Text text="{myModel>Cost}" class="sapUiLargeMargin"/>
-										<Text text="{myModel>av}" class="sapUiLargeMargin"/>
+									<Text text="{myModel>Engine}" class="sapUiSmallMargin" />
+									<Text text="{myModel>TopSpeed}" class="sapUiSmallMargin" />
+									<Text text="{myModel>Year}" class="sapUiSmallMargin"/>
+									<Text text="{myModel>Cost}" class="sapUiSmallMargin"/>
+										<!--<Text text="{myModel>av}" class="sapUiSmallMargin" />-->
+									<core:Icon src ="sap-icon://warning" color = "{path:'myModel>av', formatter:'.formatter.statusAvilable'}" class="sapUiSmallMargin"/>
 								</cells>
 							</ColumnListItem>
 						</items>
