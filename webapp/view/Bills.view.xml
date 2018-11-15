@@ -23,8 +23,8 @@
 											<Input placeholder="Name" id="i1" valueLiveUpdate="true"/>
 											<Label text="Email"/>
 											<Input placeholder="Email" id="i2" valueLiveUpdate="true"/>
-											<Label text="Mobile No"/>
-											<Input placeholder="Mobile No." id="i3" valueLiveUpdate="true"/>
+											<Label text="Mobile No" />
+											<Input placeholder="Mobile No." id="i3" valueLiveUpdate="true" type="Number" />
 											<Label text="Address"/>
 											<Input placeholder="Address" id="i4" valueLiveUpdate="true"/>
 											<Label text="Mode of Payment"/>
@@ -32,14 +32,14 @@
 												<core:Item key="Cash" text="Cash"/>
 												<core:Item key="Card" text="Card"/>
 											</ComboBox>
-											<Label text="Date"/>
-											<DatePicker placeholder="Enter Date" id="i6" change="handleChange" valueLiveUpdate="true" />
+											<!--<Label text="Date"/>-->
+											<!--<DatePicker placeholder="Enter Date" id="i6" change="handleChange" valueLiveUpdate="true" />-->
 											
 											<core:Title text="Car Details"/>
-											<Label text="Car Model"/>
-											<Input id="i7" valueLiveUpdate="true"/>
+											<Label text="Car Model"  />
+											<Input id="i7" valueLiveUpdate="true" editable="false"/>
 											<Label text="Amount"/>
-											<Input id="i8"   valueLiveUpdate="true"/>
+											<Input id="i8"   valueLiveUpdate="true" editable="false"/>
 												
 											<!--<Label text="Status"/>-->
 											<!--<ComboBox items="" value="Choose the Status" id="i9" >-->

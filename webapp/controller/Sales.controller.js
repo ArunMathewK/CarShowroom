@@ -9,10 +9,10 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("Showroom.CarShowroom.controller.Sales", {
-		formatter:formatter,
-		
+		formatter: formatter,
+
 		onInit: function () {
-	this.getOwnerComponent().getModel("myModel").setProperty("/todayDate", new Date());
+			this.getOwnerComponent().getModel("myModel").setProperty("/todayDate", new Date());
 			this.getView().setModel(new JSONModel(), "jmodel");
 			// this.getView().getModel("jmodel").setProperty("/oModel", Enames);
 			this.getView().getModel("jmodel").setProperty("/editable", false);
@@ -22,6 +22,18 @@ sap.ui.define([
 			var oModel = this.getView().getModel("myModel");
 			var Transaction = oModel.oData.eighteen;
 			oModel.setProperty("/Eighteen", Transaction);
+		},
+		onNotifClick: function (oEvent) {
+				this.getView().byId("bell").setText("");
+			// create popover
+			if (!this._oPopover) {
+				this._oPopover = sap.ui.xmlfragment("Showroom.CarShowroom.Fragment.notificationback", this);
+				this.getView().addDependent(this._oPopover);
+				// this._oPopover.bindElement("myModel>/notificationback");
+			}
+
+			this._oPopover.openBy(oEvent.getSource());
+			this.getView().getModel("data").setProperty("/allData/0/notifSymb", "");
 		},
 		onSortTeam: function (oEvent) {
 			var olist1 = oEvent.getParameters().value;
@@ -106,6 +118,9 @@ sap.ui.define([
 
 			oDialog.open();
 		},
+		cancel1: function () {
+			this.getView().byId("idCloseDialog10").close();
+		},
 		ocClosefrg: function (event) {
 			this.getView().byId("idCloseDialog10").close();
 			var oModel = this.getView().getModel("myModel"),
@@ -117,7 +132,7 @@ sap.ui.define([
 			oMonth = parseInt(oModel.oData.todayDate.getMonth()) + 1;
 
 			this._object.av = "Pending";
-				this._object.color =this.getView().byId("color").getValue(); 
+			this._object.color = this.getView().byId("color").getValue();
 			this._object.Date = oModel.oData.todayDate.getDate() + "/" + oMonth + "/" + oModel.oData.todayDate.getFullYear();
 			aArray.push(this._object);
 			oModel.setProperty("/notification", aArray);
@@ -162,7 +177,7 @@ sap.ui.define([
 			var ob = oevent.getParameters().listItem.getBindingContext("myModel").getObject(),
 				oModel = this.getView().getModel("myModel");
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-				this._object = "";
+			this._object = "";
 			for (var i = 0; i < oModel.oData.notification.length; i++) {
 				if (ob.CarName === oModel.oData.notification[i].CarName) {
 					MessageToast.show("Care Request already send for the Production");
@@ -189,7 +204,7 @@ sap.ui.define([
 
 				oDialog.open();
 			}
-				this._object = ob;
+			this._object = ob;
 			oModel.setProperty("/newCarModelValue", this._object.CarName);
 		},
 		onSearch: function (event) {

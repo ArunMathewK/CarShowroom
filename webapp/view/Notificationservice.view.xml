@@ -1,5 +1,5 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Showroom.CarShowroom.controller.Notification"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form" xmlns:tnt="sap.tnt">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="Showroom.CarShowroom.controller.Notificationservice" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form" xmlns:tnt="sap.tnt">
 	<!--	<tnt:ToolHeader>-->
 	<!--	<Button icon="sap-icon://nav-back" type="Transparent" press="onNavBack">-->
 	<!--		<layoutData>-->
@@ -13,53 +13,43 @@
 	<!--		</layoutData>-->
 	<!--	</Text>-->
 	<!--	<ToolbarSpacer/>-->
-	<!--<Button icon="sap-icon://log" type="Transparent" press="onUserNamePress">-->
-	<!--	<layoutData>-->
-	<!--		<OverflowToolbarLayoutData priority="NeverOverflow"/>-->
-	<!--	</layoutData>-->
-	<!--</Button>-->
+		<!--<Button icon="sap-icon://log" type="Transparent" press="onUserNamePress">-->
+		<!--	<layoutData>-->
+		<!--		<OverflowToolbarLayoutData priority="NeverOverflow"/>-->
+		<!--	</layoutData>-->
+		<!--</Button>-->
 	<!--</tnt:ToolHeader>-->
-		<!--<Toolbar>-->
-		<!--				<ToolbarSpacer/>-->
-						
-		<!--				<Label text="To Service notification" />-->
-		<!--				<Button  icon="sap-icon://navigation-right-arrow"  type="Ghost" press="service"/>-->
-	
-		<!--							</Toolbar>-->
-	<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+	<SplitApp id="SplitAppDemo1" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
 		<detailPages>
 			<Page id="detail" title="Detail 1" showHeader="false" class="sapUiStdPage">
 				<content>
 						<Bar>
 						<contentRight>
-							<Label text="To Service notification" />
+							<Label text="To Sales notification" />
 						<Button  icon="sap-icon://navigation-right-arrow"  type="Ghost" press="service"/>
 						</contentRight>
 					</Bar>
-					<f:SimpleForm editable="true" columnsM="2" columnsL="2" columnsXL="2" class="sapUiMediumMarginBegin">
+					<f:SimpleForm editable="true" columnsM="2" columnsL="2" columnsXL="2" class="sapUiLargeMarginBegin">
 						<f:content>
-							<core:Title text="Car Detail"/>
+							<core:Title text="Car Parts Detail"/>
 							<Label text=""/>
-							<Image src="{myModel>/Panel/image}" height="40%" width="50%"/>
+							<Image src="{myModel>/Panel/Img}" height="30%" width="40%"/>
 							<!--<Input placeholder="Name" editable="{jmodel>/editable}" value="{myModel>/Panel/Name}" />-->
-							<Label text="Car Model"/>
-							<Text text="{myModel>/Panel/CarName}" id="model"/>
+							<Label text="Car Part Required"/>
+							<Text text="{myModel>/Panel/PartsName}" id="model"/>
 							<Label text="Delivary Date"/>
-							<Text text="{myModel>/Panel/Date}"/>
-							<Label text="Color"/>
-							<Text text="{myModel>/Panel/color}"/>
-								<Label text="TopSpeed"/>
-							<Text text="" id="TopSpeed"/>
-								<Label text="Engine"/>
-							<Text text="" id="Engine"/>
-								<Label text="Cost"/>
-							<Text text="" id="Cost"/>
+							<Text text="{myModel>/Panel/Price}"/>
+							<!--<Label text="Color"/>-->
+							<!--<Text text="{myModel>/Panel/color}"/>-->
 						</f:content>
 					</f:SimpleForm>
 				</content>
 				<footer>
 					<Bar class="sapUiStdFooter">
 						<contentRight>
+							<!--<Button xmlns="sap.m" type="Accept" text="BOOK" id="addemp15" icon="sap-icon://add" tooltip="Book the item"/>-->
+							<!--<Button xmlns="sap.m" class="sapUiSmallMarginBottom"-->
+							<!-- />-->
 							<Button class="sapUiSmallMarginBottom" type="Accept" text="Accept" press="Accept" visible="false" id="Accept" icon="sap-icon://accept"/>
 							<Button class="sapUiSmallMarginBottom" type="Reject" text="Reject" press="Reject" visible="false" id="Reject" icon="sap-icon://decline"/>
 						</contentRight>
@@ -71,15 +61,19 @@
 			<Page id="master" title="Master 1" showHeader="false" icon="sap-icon://action" class="sapUiStdPage" showNavButton="true"
 				navButtonPress="onNavBack">
 				<content>
-				
+					<!--<Bar>-->
+					<!--	<contentLeft>-->
+					<!--		<Button icon="sap-icon://navigation-left-arrow" type="Ghost" press="service"/>-->
+					<!--	</contentLeft>-->
+					<!--</Bar>-->
 					<SearchField liveChange="onCustomerSearch"></SearchField>
-					<List id="idCustomerdetails" items="{path:'myModel>/notification',sorter:{path : 'Name'}}" itemPress="item" delete="onDelete"
+					<List id="idCustomerdetails" items="{path:'myModel>/notificationservice',sorter:{path : 'Name'}}" itemPress="item" delete="onDelete"
 						updateFinished="Updated" includeItemInSelection="true" press="">
 						<items>
-							<ObjectListItem title="{myModel>CarName}" type="Active" selected="true">
+							<ObjectListItem title="{myModel>PartsName}" type="Active" selected="true">
 								<attributes>
-									<ObjectAttribute text="Delivery Date:{myModel>Date}"/>
-									<ObjectAttribute text="Status:{myModel>av}"/>
+									<!--<ObjectAttribute text="Delivery Date:{myModel>Date}"/>-->
+									<ObjectAttribute text="Status:{myModel>Price}"/>
 								</attributes>
 								<firstStatus>
 									<ObjectStatus icon="sap-icon://chevron-phase-2" state="{path:'myModel>av', formatter:'.formatter.status'}"></ObjectStatus>
@@ -96,6 +90,7 @@
 					</Bar>
 				</footer>
 			</Page>
+		
 		</masterPages>
 	</SplitApp>
 </mvc:View>

@@ -2,11 +2,7 @@
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:tnt="sap.tnt"
 	xmlns:viz.data="sap.viz.ui5.data" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz="sap.viz.ui5.controls">
 		<tnt:ToolHeader>
-		<Button icon="sap-icon://nav-back" type="Transparent" press="onNavBack">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="NeverOverflow"/>
-			</layoutData>
-		</Button>
+		
 		<ToolbarSpacer/>
 		<Text text="Show Room" wrapping="false">
 			<layoutData>
@@ -21,22 +17,33 @@
 		</Button>
 	</tnt:ToolHeader>
 	<l:BlockLayout id="BlockLayoutTwo">
-		<!--<l:BlockLayoutRow >-->
-		<!--	<l:BlockLayoutCell id="cell-1" title="Notification" backgroundColorSet="ColorSet6" backgroundColorShade="ShadeA" >-->
-		<!--		<core:Icon src="sap-icon://bell" height="50%"/>-->
-		<!--		<Link text="Notification" press="blocklayout"/>-->
-		<!--	</l:BlockLayoutCell>-->
-		<!--</l:BlockLayoutRow>-->
+	
 		<l:BlockLayoutRow>
 			<l:BlockLayoutCell class="customCellImageBackground" title="Notification" backgroundColorSet="ColorSet5" backgroundColorShade="ShadeC">
 				<core:Icon src="sap-icon://bell" press="blocklayout"/>
 			</l:BlockLayoutCell>
-			<l:BlockLayoutCell id="cell-2" title="Inventory" backgroundColorSet="ColorSet1" backgroundColorShade="ShadeC">
+			<l:BlockLayoutCell id="cell-9" title="Inventory" backgroundColorSet="ColorSet1" backgroundColorShade="ShadeC">
 				<core:Icon src="sap-icon://inventory" press="inventory"/>
 				<!--<Link text="inventory" press="inventory"/>-->
 			</l:BlockLayoutCell>
 		</l:BlockLayoutRow>
 	</l:BlockLayout>
+		<!--<Page id="p1" title="Dash Board" floatingFooter="true" showHeader="false" enableScrolling="false">-->
+				<l:BlockLayout id="BlockLayout">
+					<l:BlockLayoutRow>
+					
+						<l:BlockLayoutCell id="cell-2" title="CAR PRODUCTION" backgroundColorSet="ColorSet10" backgroundColorShade="ShadeB" titleAlignment="Center">
+							<core:Icon src=" "/>
+						</l:BlockLayoutCell>
+						<l:BlockLayoutCell id="cell-3" title="PARTS PRODUCTION" backgroundColorSet="ColorSet10" backgroundColorShade="ShadeC" titleAlignment="Center">
+							<core:Icon src=" "/>
+						</l:BlockLayoutCell>
+					</l:BlockLayoutRow>
+				
+					
+						
+				</l:BlockLayout>
+			<!--</Page>-->
 	<l:Grid defaultSpan="XL6 L6 M6 S12">
 		<l:content>
 			<viz:VizFrame id="idVizFrame" vizType='line'>
@@ -73,216 +80,5 @@
 			</viz:VizFrame>
 		</l:content>
 	</l:Grid>
-	<!--<tnt:ToolHeader >-->
-	<!--	<Image id="abc22" src="./Img/logo1.png" class="logoimage"/>-->
-	<!--	<ToolbarSpacer/>-->
-	<!--	<Text text="SHOWROOM NAME"/>-->
-	<!--	<ToolbarSpacer/>-->
-	<!--	<Button type="Reject" tooltip="LogOut" icon="sap-icon://log" press="logOut"/>-->
-	<!--		<Button type="Default" tooltip="notification" icon="sap-icon://bell" press="notification"/>-->
-	<!--</tnt:ToolHeader>-->
-	<!--<VBox enableScrolling="false">-->
-	
-	<!--	<NavContainer id="navCon" width="100%" height="33em" class="navContainerControl sapUiSmallMarginBottom" enableScrolling="false">-->
-	<!--		<Page id="p1" title="Dash Board" floatingFooter="true" showHeader="false" enableScrolling="false">-->
-	<!--			<l:BlockLayout id="BlockLayoutTwo">-->
-	<!--				<l:BlockLayoutRow>-->
-	<!--					<l:BlockLayoutCell id="cell-1" title="Production of Cars" backgroundColorSet="ColorSet5" backgroundColorShade="ShadeA" titleAlignment="Center">-->
-	<!--						<Text text=""/>-->
-	<!--					</l:BlockLayoutCell>-->
-	<!--					<l:BlockLayoutCell id="cell-2" title="Production of Car Parts" backgroundColorSet="ColorSet5" backgroundColorShade="ShadeB" titleAlignment="Center">-->
-	<!--						<core:Icon src=" "/>-->
-	<!--					</l:BlockLayoutCell>-->
-						<!--<l:BlockLayoutCell id="cell-3" title="ALL TRANSACTION" backgroundColorSet="ColorSet5" backgroundColorShade="ShadeC" titleAlignment="Center">-->
-						<!--	<core:Icon src=" "/>-->
-						<!--</l:BlockLayoutCell>-->
-	<!--				</l:BlockLayoutRow>-->
-	<!--				<l:BlockLayoutRow>-->
-	<!--					<l:BlockLayoutCell id="cell-4" title=" " backgroundColorSet="ColorSet11" backgroundColorShade="ShadeD" titleAlignment="Center">-->
-	<!--						<viz:VizFrame id="idVizFrame1" height="320px" width="600px" class="sapUiHugeMarginEnda" vizType='line' vizProperties="{title:{visible:false}}">-->
-	<!--							<viz:dataset>-->
-	<!--								<viz.data:FlattenedDataset id="idGraph1" data="{myModel>/ServiceDone}">-->
-	<!--									<viz.data:dimensions>-->
-	<!--										<viz.data:DimensionDefinition name="year" value="{myModel>year}"/>-->
-	<!--									</viz.data:dimensions>-->
-	<!--									<viz.data:measures>-->
-	<!--										<viz.data:MeasureDefinition name="Car Production" value="{myModel>No: Of servive}"/>-->
-	<!--									</viz.data:measures>-->
-	<!--								</viz.data:FlattenedDataset>-->
-	<!--							</viz:dataset>-->
-	<!--							<viz:feeds>-->
-	<!--								<viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure" values="Car Production"/>-->
-	<!--								<viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension" values="year"/>-->
-	<!--							</viz:feeds>-->
-	<!--						</viz:VizFrame>-->
-	<!--						<ToolbarSpacer/>-->
-	<!--					</l:BlockLayoutCell>-->
-	<!--					<l:BlockLayoutCell id="cell-5" title=" "  backgroundColorSet="ColorSet11" backgroundColorShade="ShadeC" titleAlignment="Center">-->
-							<!--<core:Icon src=" "/>-->
-	<!--						<viz:VizFrame id="idVizFrame2" height="320px" class="sapUiHugeMarginEnda" width="600px" vizType='pie' vizProperties="{title:{visible:false}}">-->
-	<!--							<viz:dataset>-->
-	<!--								<viz.data:FlattenedDataset id="idGraph2" data="{myModel>/ProductSold}">-->
-	<!--									<viz.data:dimensions>-->
-	<!--										<viz.data:DimensionDefinition name="year" value="{myModel>year}"/>-->
-	<!--									</viz.data:dimensions>-->
-	<!--									<viz.data:measures>-->
-	<!--										<viz.data:MeasureDefinition name="Parts Production" value="{myModel>SoldOut}"/>-->
-	<!--									</viz.data:measures>-->
-	<!--								</viz.data:FlattenedDataset>-->
-	<!--							</viz:dataset>-->
-	<!--							<viz:feeds>-->
-	<!--								<viz.feeds:FeedItem uid="size"  type="Measure" values="Parts Production"/>-->
-	<!--								<viz.feeds:FeedItem uid="color" type="Dimension" values="year"/>-->
-	<!--							</viz:feeds>-->
-	<!--						</viz:VizFrame>-->
-	<!--					</l:BlockLayoutCell>-->
-						<!--<l:BlockLayoutCell id="cell-6" title=" " backgroundColorSet="ColorSet11" backgroundColorShade="ShadeD" titleAlignment="Center">-->
-							<!--<core:Icon src=" "/>-->
-						<!--	<viz:VizFrame id="idVizFrame3" height="320px" width="400px" class="sapUiHugeMarginEnda" vizType='line' vizProperties="{title:{visible:false}}">-->
-						<!--		<viz:dataset>-->
-						<!--			<viz.data:FlattenedDataset id="idGraph3" data="{myModel>/AllTransaction}">-->
-						<!--				<viz.data:dimensions>-->
-						<!--					<viz.data:DimensionDefinition name="year" value="{myModel>year}"/>-->
-						<!--				</viz.data:dimensions>-->
-						<!--				<viz.data:measures>-->
-						<!--					<viz.data:MeasureDefinition name="Profit" value="{myModel>Profit}"/>-->
-						<!--				</viz.data:measures>-->
-						<!--			</viz.data:FlattenedDataset>-->
-						<!--		</viz:dataset>-->
-						<!--		<viz:feeds>-->
-						<!--			<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Profit"/>-->
-						<!--			<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="year"/>-->
-						<!--		</viz:feeds>-->
-						<!--	</viz:VizFrame>-->
-						<!--</l:BlockLayoutCell>-->
-	<!--				</l:BlockLayoutRow>-->
-	<!--			</l:BlockLayout>-->
-				<!--<footer>-->
-				<!--	<Toolbar>-->
-				<!--		<ToolbarSpacer/>-->
-				<!--		<Button type="Ghost" text="Dash Board"/>-->
-				<!--	</Toolbar>-->
-				<!--</footer>-->
-	<!--		</Page>-->
-	<!--		<Page id="p2" title="Service Details" floatingFooter="true" showHeader="false" enableScrolling="true">-->
-	<!--			<content>-->
-	<!--				<Toolbar>-->
-	<!--					<ToolbarSpacer/>-->
-	<!--					<SearchField liveChange="onSearch" id="list1" width="40%"/>-->
-	<!--				</Toolbar>-->
-	<!--				<Table items="{myModel>/Sales}" itemPress="onItemPress" id="table" growing="true" growingThreshold="50" class="sapUiSmallMargin">-->
-	<!--					<columns>-->
-	<!--						<Column >-->
-	<!--							<Text text="Image" class="sapUiLargeMarginBegin"/>-->
-	<!--						</Column>-->
-	<!--						<Column demandPopin="true" minScreenWidth="Tablet">-->
-	<!--							<Text text="Car Name" class="sapUiLargeMarginBeginEnd"/>-->
-	<!--						</Column>-->
-	<!--						<Column demandPopin="true" minScreenWidth="Tablet">-->
-	<!--							<Text text="Color" class="sapUiLargeMarginBeginEnd"/>-->
-	<!--						</Column>-->
-	<!--						<Column demandPopin="true" minScreenWidth="Tablet">-->
-	<!--							<Text text="Engine" class="sapUiLargeMarginBeginEnd"/>-->
-	<!--						</Column>-->
-	<!--						<Column demandPopin="true" minScreenWidth="Tablet">-->
-	<!--							<Text text="Top Speed" class="sapUiLargeMarginBeginEnd"/>-->
-	<!--						</Column>-->
-	<!--						<Column demandPopin="true" minScreenWidth="Tablet">-->
-	<!--							<Text text="Year" class="sapUiLargeMarginBeginEnd"/>-->
-	<!--						</Column>-->
-	<!--						<Column demandPopin="true" minScreenWidth="Tablet">-->
-	<!--							<Text text="Cost" class="sapUiLargeMarginBeginEnd"/>-->
-	<!--						</Column>-->
-	<!--							<Column demandPopin="true" minScreenWidth="Tablet">-->
-	<!--							<Text text="Stock" class="sapUiLargeMarginBeginEnd"/>-->
-	<!--						</Column>-->
-	<!--					</columns>-->
-	<!--					<items>-->
-	<!--						<ColumnListItem type="Active">-->
-	<!--							<cells>-->
-	<!--								<Image src="{myModel>image}" height="10%" width="100%"/>-->
-	<!--								<Text text="{myModel>CarName}" class="sapUiLargeMargin"/>-->
-	<!--								<ComboBox value="Select Color" change="onSortTeam" class="sapUiLargeMargin">-->
-	<!--									<items >-->
-	<!--										<core:Item text="{myModel>Colors/0/Color1}" id="i1" key="runs"></core:Item>-->
-	<!--										<core:Item text="{myModel>Colors/0/Color2}" id="i2" key="avg"></core:Item>-->
-	<!--										<core:Item text="{myModel>Colors/0/Color3}" id="i3" key="wickets"></core:Item>-->
-	<!--										<core:Item text="{myModel>Colors/0/Color4}" key="year"></core:Item>-->
-	<!--									</items>-->
-	<!--								</ComboBox>-->
-	<!--								<Text text="{myModel>Engine}" class="sapUiLargeMargin"/>-->
-	<!--								<Text text="{myModel>TopSpeed}" class="sapUiLargeMargin"/>-->
-	<!--								<Text text="{myModel>Year}" class="sapUiLargeMargin"/>-->
-	<!--								<Text text="{myModel>Cost}" class="sapUiLargeMargin"/>-->
-	<!--									<Text text="{myModel>av}" class="sapUiLargeMargin"/>-->
-	<!--							</cells>-->
-	<!--						</ColumnListItem>-->
-	<!--					</items>-->
-	<!--				</Table>-->
-	<!--			</content>-->
-	<!--		</Page>-->
-	<!--		<Page id="p3" title="Service Details" floatingFooter="true" showHeader="false" enableScrolling="true">-->
-	<!--			<Toolbar>-->
-	<!--				<ToolbarSpacer/>-->
-	<!--				<SearchField liveChange="onSearch" placeholder="Enter the item name here.." id="IdSearch" width="30%"/>-->
-	<!--			</Toolbar>-->
-	<!--			<content>-->
-	<!--				<List id="idInvenlist" items="{ path:'myModel>/Parts' }" itemPress="pdetails" >-->
-	<!--					<items>-->
-	<!--						<ObjectListItem  title="{myModel>PartsName}" icon="" id="listItem" selected="false" number="{myModel>Price}"-->
-	<!--							numberUnit="{myModel>av}"/>-->
-	<!--					</items>-->
-	<!--				</List>-->
-	<!--			</content>-->
-	<!--		</Page>-->
-	<!--	</NavContainer>-->
-	<!--<HBox class="sapUiMediumMarginBeginEnd VBox">-->
-	<!--		<GenericTile class="sapUiMediumMarginBeginEnd sapUiSmallMarginBottom sapUiSmallMarginTop" header="Dash Board" subheader="" press="handleNav"-->
-	<!--			backgroundImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNabW499LkB47qkeHPVgDomCBgJzMsLxeBpLg81vbDZxcbeo7f3A">-->
-	<!--			<TileContent footer=" ">-->
-					<!--<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>-->
-	<!--				<NewsContent contentText="DASH-BOARD"/>-->
-	<!--			</TileContent>-->
-	<!--			<customData>-->
-	<!--				<core:CustomData key="target" value="p1"/>-->
-	<!--			</customData>-->
-	<!--		</GenericTile>-->
-	<!--		<GenericTile class="sapUiMediumMarginBeginEnd sapUiSmallMarginBottom sapUiSmallMarginTop" header=" " subheader="" press="handleNav"-->
-	<!--			backgroundImage="http://images.ebizautos.com/Foundation/Sites/13048/AccountTemplate/images/btn-view-inventory.jpg">-->
-	<!--			<TileContent>-->
-	<!--				<NewsContent contentText="CAR SALES INVENTORY"/>-->
-					<!--<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>-->
-	<!--			</TileContent>-->
-	<!--			<customData>-->
-	<!--				<core:CustomData key="target" value="p2"/>-->
-	<!--			</customData>-->
-	<!--		</GenericTile>-->
-	<!--		<GenericTile class="sapUiMediumMarginBeginEnd sapUiSmallMarginBottom sapUiSmallMarginTop" header=" " subheader="" press="handleNav"-->
-	<!--			backgroundImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCUYgc_ajfQId-enrU8TiwBll7hh03TYJBGT_CAk3uby9SLZou_Q">-->
-	<!--			<TileContent>-->
-	<!--				<NewsContent contentText="CAR SERVICE INVENTORY"/>-->
-					<!--<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>-->
-	<!--			</TileContent>-->
-	<!--			<customData>-->
-	<!--				<core:CustomData key="target" value="p3"/>-->
-	<!--			</customData>-->
-	<!--		</GenericTile>-->
-	<!--		</HBox>-->
-	<!--	<HBox visible="false">-->
-	<!--		<Button text="Back" type="Back" press="handleNav">-->
-	<!--			<layoutData>-->
-	<!--				<FlexItemData growFactor="1"/>-->
-	<!--			</layoutData>-->
-	<!--		</Button>-->
-	<!--		<Select id="animationSelect">-->
-	<!--			<core:Item text="Slide animation" key="slide"/>-->
-	<!--			<core:Item text="Fade animation" key="fade"/>-->
-	<!--			<core:Item text="Flip animation" key="flip"/>-->
-	<!--			<core:Item text="Show animation" key="show"/>-->
-	<!--			<layoutData>-->
-	<!--				<FlexItemData growFactor="1"/>-->
-	<!--			</layoutData>-->
-	<!--		</Select>-->
-	<!--	</HBox>-->
-	<!--</VBox>-->
+
 </mvc:View>

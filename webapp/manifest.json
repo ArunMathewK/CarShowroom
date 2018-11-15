@@ -112,10 +112,20 @@
 					"pattern": "Notification ",
 					"target": "Notification"
 				},
-					{
+				{
 					"name": "inventory",
 					"pattern": "inventory ",
 					"target": "Inventory"
+				},
+				{
+					"name": "Notificationservice",
+					"pattern": "Notificationservice ",
+					"target": "Notificationservice"
+				},
+					{
+					"name": "seviceinventory",
+					"pattern": "seviceinventory ",
+					"target": "seviceinventory"
 				},
 				{
 					"name": "Bill",
@@ -183,6 +193,16 @@
 				"Inventory": {
 					"viewType": "XML",
 					"viewName": "Inventory",
+					"controlId": "idAppControl"
+				},
+				"Notificationservice": {
+					"viewType": "XML",
+					"viewName": "Notificationservice",
+					"controlId": "idAppControl"
+				},
+				"seviceinventory": {
+					"viewType": "XML",
+					"viewName": "seviceinventory",
 						"controlId": "idAppControl"
 				}
 			}

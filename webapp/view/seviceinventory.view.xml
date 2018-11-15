@@ -1,0 +1,80 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="Showroom.CarShowroom.controller.seviceinventory" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:tnt="sap.tnt">
+		<tnt:ToolHeader>
+		<Button icon="sap-icon://nav-back" type="Transparent" press="onNavBack">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow"/>
+			</layoutData>
+		</Button>
+		<ToolbarSpacer/>
+		<Text text="Show Room" wrapping="false">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="Disappear"/>
+			</layoutData>
+		</Text>
+		<ToolbarSpacer/>
+		<!--<Button icon="sap-icon://log" type="Transparent" press="onUserNamePress">-->
+		<!--	<layoutData>-->
+		<!--		<OverflowToolbarLayoutData priority="NeverOverflow"/>-->
+		<!--	</layoutData>-->
+		<!--</Button>-->
+	</tnt:ToolHeader>
+	<Toolbar>
+							<ToolbarSpacer/>
+							<Label text="To Sales Inventory" />
+						<Button  icon="sap-icon://navigation-right-arrow"  type="Ghost" press="onSortTeam"/>
+		<!--<ComboBox  change="onSortTeam" items= "" selectedKey = "{myModel>/Colors/0/key}" value="">-->
+		<!--								<items>-->
+		<!--									<core:Item text="sales" id="i1" key=""></core:Item>-->
+		<!--										<core:Item text="service" id="i2" key=""></core:Item>-->
+		<!--								</items>-->
+		<!--							</ComboBox>	-->
+									</Toolbar>
+	<Table items="{myModel>/Parts}" itemPress="onItemPress" id="table" growing="true" growingThreshold="50" class="sapUiSmallMargin">
+						<columns>
+							<Column >
+								<Text text="Part Name" />
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="Price" />
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet" width = "12rem">
+								<Text text="Status" />
+							</Column>
+							<!--<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center" width = "12rem">-->
+							<!--	<Text text="Engine" />-->
+							<!--</Column>-->
+							<!--<Column demandPopin="true" minScreenWidth="Tablet">-->
+							<!--	<Text text="Top Speed" />-->
+							<!--</Column>-->
+							<!--<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center">-->
+							<!--	<Text text="Year" />-->
+							<!--</Column>-->
+							<!--<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center" width = "8rem">-->
+							<!--	<Text text="Cost" />-->
+							<!--</Column>-->
+							<!--	<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center" width = "8rem">-->
+							<!--	<Text text="Stock" />-->
+							<!--</Column>-->
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<!--<Image src="{myModel>image}" height="3rem" width="5rem"/>-->
+									<Text text="{myModel>PartsName}" class="sapUiSmallMargin"/>
+									<!--<ComboBox value="Select Color" change="onSortTeam" items= "{myModel>/Colors}" selectedKey = "{myModel>/Colors/0/key}">-->
+									<!--	<items>-->
+									<!--		<core:Item text="{myModel>Color}" id="i11" key="{myModel>key}"></core:Item>-->
+									<!--	</items>-->
+									<!--</ComboBox>-->
+									<Text text="{myModel>Price}" class="sapUiSmallMargin" />
+									<Text text="{myModel>av}" class="sapUiSmallMargin" />
+									<!--<Text text="{myModel>Year}" class="sapUiSmallMargin"/>-->
+									<!--<Text text="{myModel>Cost}" class="sapUiSmallMargin"/>-->
+										<!--<Text text="{myModel>av}" class="sapUiSmallMargin" />-->
+									<!--<core:Icon src = "sap-icon://warning" color = "{path:'myModel>av', formatter:'.formatter.statusAvilable'}" class="sapUiSmallMargin"/>-->
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+</mvc:View>

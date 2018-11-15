@@ -8,7 +8,7 @@
 					<r:content>
 						<viz:VizFrame id="idVizFrame" height='400px' width="50%" vizType='column'>
 							<viz:dataset>
-								<viz.data:FlattenedDataset id="idGraph" data="{myModel>/eighteen}">
+								<viz.data:FlattenedDataset id="idGraph" data="{myModel>/Eighteen}">
 									<viz.data:dimensions>
 										<viz.data:DimensionDefinition name="Month" value="{myModel>month}"/>
 									</viz.data:dimensions>

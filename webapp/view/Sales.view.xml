@@ -2,11 +2,12 @@
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" displayBlock="true" xmlns:f="sap.ui.layout.form" xmlns:tnt="sap.tnt"
 	xmlns:r="sap.suite.ui.commons" xmlns:viz.data="sap.viz.ui5.data" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
 	xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout">
-		<tnt:ToolHeader >
+	<tnt:ToolHeader >
 		<Image id="abc22" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c46b.png" class="logoimage"/>
 		<ToolbarSpacer/>
 		<Text text="SHOWROOM NAME"/>
 		<ToolbarSpacer/>
+		<Button type="Ghost" tooltip="Notification" icon="sap-icon://bell" text="{myModel>/notificationback/2/status}" press="onNotifClick" id="bell"/>
 		<Button type="Reject" tooltip="LogOut" icon="sap-icon://log" press="logOut"/>
 	</tnt:ToolHeader>
 	<VBox enableScrolling="false">
@@ -148,10 +149,8 @@
 					</l:BlockLayoutRow>
 				</l:BlockLayout>
 			</Page>
-		
-
 			<Page id="p2" title="Service Details" floatingFooter="true" showHeader="false" enableScrolling="true">
-					<content>
+				<content>
 					<Toolbar>
 						<ToolbarSpacer/>
 						<SearchField liveChange="onSearch" id="list1" width="40%"/>
@@ -159,28 +158,28 @@
 					<Table items="{myModel>/Sales}" itemPress="onItemPress" id="table" growing="true" growingThreshold="50" class="sapUiSmallMargin">
 						<columns>
 							<Column >
-								<Text text="Image" />
+								<Text text="Image"/>
 							</Column>
 							<Column demandPopin="true" minScreenWidth="Tablet">
-								<Text text="Car Name" />
+								<Text text="Car Name"/>
 							</Column>
-							<Column demandPopin="true" minScreenWidth="Tablet" width = "12rem">
-								<Text text="Avilable Color" />
+							<Column demandPopin="true" minScreenWidth="Tablet" width="12rem">
+								<Text text="Avilable Color"/>
 							</Column>
-							<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center" width = "12rem">
-								<Text text="Engine" />
+							<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Center" width="12rem">
+								<Text text="Engine"/>
 							</Column>
 							<Column demandPopin="true" minScreenWidth="Tablet">
-								<Text text="Top Speed" />
+								<Text text="Top Speed"/>
 							</Column>
-							<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center">
-								<Text text="Year" />
+							<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Center">
+								<Text text="Year"/>
 							</Column>
-							<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center" width = "8rem">
-								<Text text="Cost" />
+							<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Center" width="8rem">
+								<Text text="Cost"/>
 							</Column>
-								<Column demandPopin="true" minScreenWidth="Tablet" hAlign = "Center" width = "8rem">
-								<Text text="Stock" />
+							<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Center" width="8rem">
+								<Text text="Stock"/>
 							</Column>
 						</columns>
 						<items>
@@ -188,167 +187,86 @@
 								<cells>
 									<Image src="{myModel>image}" height="3rem" width="5rem"/>
 									<Text text="{myModel>CarName}" class="sapUiSmallMargin"/>
-									<ComboBox value="Select Color" change="onSortTeam" items= "{myModel>/Colors}" selectedKey = "{myModel>/Colors/0/key}">
+									<ComboBox value="Select Color" change="onSortTeam" items="{myModel>/Colors}" selectedKey="{myModel>/Colors/0/key}">
 										<items>
 											<core:Item text="{myModel>Color}" id="i1" key="{myModel>key}"></core:Item>
 										</items>
 									</ComboBox>
-									<Text text="{myModel>Engine}" class="sapUiSmallMargin" />
-									<Text text="{myModel>TopSpeed}" class="sapUiSmallMargin" />
+									<Text text="{myModel>Engine}" class="sapUiSmallMargin"/>
+									<Text text="{myModel>TopSpeed}" class="sapUiSmallMargin"/>
 									<Text text="{myModel>Year}" class="sapUiSmallMargin"/>
 									<Text text="{myModel>Cost}" class="sapUiSmallMargin"/>
-										<!--<Text text="{myModel>av}" class="sapUiSmallMargin" />-->
-									<core:Icon src ="sap-icon://warning" color = "{path:'myModel>av', formatter:'.formatter.statusAvilable'}" class="sapUiSmallMargin"/>
+									<!--<Text text="{myModel>av}" class="sapUiSmallMargin" />-->
+									<core:Icon src="sap-icon://warning" color="{path:'myModel>av', formatter:'.formatter.statusAvilable'}" class="sapUiSmallMargin"/>
 								</cells>
 							</ColumnListItem>
 						</items>
 					</Table>
 				</content>
-				<footer>
-					<Bar class="sapUiStdFooter">
-						<contentRight>
-							<Button class="sapUiSmallMarginBottom" type="Ghost" text="CHECK PRODUCTION" press="oProduction" tooltip="Check Car in Production"
-								icon="sap-icon://check-availability"></Button>
-						</contentRight>
-					</Bar>
-				</footer>
-				<!--<SplitContainer>-->
-				<!--	<masterPages >-->
-				<!--		<Page title="Master" backgroundDesign="Solid" showHeader="false" enableScrolling="true" floatingFooter="true">-->
-				<!--			<SearchField liveChange="onCustomerSearch"></SearchField>-->
-				<!--			<List id="idCustomerdetails" items="{path:'myModel>/CustomerServiceDetails',sorter:{path : 'Name'}}" itemPress="item" mode="Delete"-->
-				<!--				delete="onDelete" updateFinished="Updated" includeItemInSelection="true" press="">-->
-				<!--				<items>-->
-				<!--					<ObjectListItem title="{myModel>Name}" type="Active" selected="true">-->
-				<!--						<firstStatus>-->
-				<!--							<ObjectStatus text="{myModel>Status}" state="{= ${myModel>Status} ==='Service Done' ? 'Success' : 'Error' }"/>-->
-				<!--						</firstStatus>-->
-				<!--						<attributes>-->
-				<!--							<ObjectAttribute text="Car No:{myModel>CarNumber}"/>-->
-				<!--							<ObjectAttribute text="Issue:{myModel>Issue}"/>-->
-				<!--						</attributes>-->
-				<!--					</ObjectListItem>-->
-				<!--				</items>-->
-				<!--			</List>-->
-				<!--			<footer>-->
-				<!--				<Bar>-->
-				<!--					<contentRight>-->
-				<!--						<Button xmlns="sap.m" text="New Customer?" id="addemp" value="p1" icon="sap-icon://add" press="addCustomer"-->
-				<!--							tooltip="Add New Customer details here "/>-->
-				<!--					</contentRight>-->
-				<!--				</Bar>-->
-				<!--			</footer>-->
-				<!--		</Page>-->
-				<!--	</masterPages>-->
-				<!--	<detailPages>-->
-				<!--		<Page title="Detail" backgroundDesign="Solid" showHeader="false" enableScrolling="true" floatingFooter="true">-->
-				<!--			<VBox class="sapUiSmallMargin">-->
-				<!--				<f:SimpleForm editable="true" columnsM="2" columnsL="2" columnsXL="2">-->
-				<!--					<f:content>-->
-				<!--						<core:Title text="Customer Info."/>-->
-				<!--						<Label text="Name"/>-->
-				<!--						<Input placeholder="Name" editable="{jmodel>/editable}" value="{myModel>/Panel/Name}"/>-->
-				<!--						<Label text="Email"/>-->
-				<!--						<Input placeholder="Email" editable="{jmodel>/editable}" value="{myModel>/Panel/Email}"/>-->
-				<!--						<Label text="Mobile No"/>-->
-				<!--						<Input placeholder="Mobile No." editable="{jmodel>/editable}" value="{myModel>/Panel/MobileNo}"/>-->
-				<!--						<Label text="Car Model"/>-->
-				<!--						<Input placeholder="Car Model" editable="{jmodel>/editable}" value="{myModel>/Panel/CarModel}"/>-->
-				<!--						<Label text="Car No."/>-->
-				<!--						<Input placeholder="Car No." editable="{jmodel>/editable}" value="{myModel>/Panel/CarNumber}"/>-->
-				<!--						<Label text="Date"/>-->
-				<!--						<DatePicker placeholder="Enter Date" change="handleChange" editable="{jmodel>/editable}" value="{myModel>/Panel/Date}"/>-->
-				<!--						<core:Title text="Service Details"/>-->
-				<!--						<Label text="Issue"/>-->
-				<!--						<Input placeholder="Issue" editable="{jmodel>/editable}" value="{myModel>/Panel/Issue}"/>-->
-				<!--						<Label text="Parts Replaced"/>-->
-				<!--						<MultiInput id="multiInput" placeholder="Parts Replaced" showValueHelp="true" editable="{jmodel>/editable}"-->
-				<!--							value="{myModel>/Panel/PartsReplaced}"/>-->
-				<!--						<Label text="Status"/>-->
-										<!--<Input placeholder="Issue" editable="{jmodel>/editable}" value="{myModel>/Panel/Status}"/>-->
-				<!--						<ComboBox items="" value="{myModel>/Panel/Status}" editable="{jmodel>/editable}">-->
-				<!--							<core:Item key="Service Done" text="Service Done"/>-->
-				<!--							<core:Item key="On Process" text="On Process"/>-->
-				<!--						</ComboBox>-->
-				<!--					</f:content>-->
-				<!--				</f:SimpleForm>-->
-				<!--			</VBox>-->
-				<!--			<footer>-->
-				<!--				<Bar>-->
-				<!--					<contentRight>-->
-				<!--						<Button xmlns="sap.m" type="Ghost" text="Edit" id="editBtn" icon="sap-icon://action" press="Edit" tooltip="edit"/>-->
-				<!--						<Button xmlns="sap.m" type="Accept" text="Save" id="savebtn" visible="false" tooltip="Save" press="Save" icon="sap-icon://save"-->
-				<!--							class="sapUiSmallMarginEnd"/>-->
-				<!--						<Button xmlns="sap.m" type="Reject" text="Cancel" id="cancelbtn" visible="false" icon="sap-icon://cancel" press="Cancel" tooltip="Cancel"/>-->
-				<!--					</contentRight>-->
-				<!--				</Bar>-->
-				<!--			</footer>-->
-				<!--		</Page>-->
-				<!--	</detailPages>-->
-				<!--</SplitContainer>-->
 				<!--<footer>-->
 				<!--	<Bar class="sapUiStdFooter">-->
 				<!--		<contentRight>-->
-				<!--			<Button xmlns="sap.m" type="Reject" text="CANCEL" id="addemp" icon="sap-icon://sys-cancel" tooltip="Camcel the item"/>-->
-				<!--			<Button xmlns="sap.m" type="Accept" text="SAVE" id="addemp1" icon="sap-icon://save" tooltip="Camcel the item"/>-->
+				<!--			<Button class="sapUiSmallMarginBottom" type="Ghost" text="CHECK PRODUCTION" press="oProduction" tooltip="Check Car in Production"-->
+				<!--				icon="sap-icon://check-availability"></Button>-->
 				<!--		</contentRight>-->
 				<!--	</Bar>-->
 				<!--</footer>-->
 			</Page>
 			<Page id="p3" title="Service Details" floatingFooter="true" showHeader="false" enableScrolling="false">
 				<SplitContainer>
-				<masterPages >
-					<Page title="Master" backgroundDesign="Solid" showHeader="false" enableScrolling="true" floatingFooter="true">
-						<SearchField liveChange="onCustomerSearch" ></SearchField>
-						<List id="idCustomerdetails" items="{path:'myModel>/Customer',sorter:{path : 'Name'}}" itemPress="item"  delete="onDelete" updateFinished="Updated"
-							includeItemInSelection="true" press="" >
-							<items>
-								<ObjectListItem title="{myModel>Name}"  type="Active"  selected="true" >
-									<attributes>
-										<ObjectAttribute text="Car No:{myModel>CarModel}"  />
-										<ObjectAttribute text="Issue:{myModel>MobileNo}"  />
-									</attributes>
-								</ObjectListItem>
-							</items>
-						</List>
-					<footer><Bar></Bar></footer>
-					</Page>
-				</masterPages>
-				<detailPages>
-					<Page title="Detail" backgroundDesign="Solid" showHeader="false" enableScrolling="true" floatingFooter="true">
-					<VBox class="sapUiSmallMargin">
-					<f:SimpleForm editable="true" columnsM="2" columnsL="2" columnsXL="2" class="sapUiLargeMarginBegin">
-						<f:content>
-							<core:Title text="Customer Info."/>
-							<Label text="Name"/>
-							<Text text="{myModel>/Panel/Name}"/>
-							<!--<Input placeholder="Name" editable="{jmodel>/editable}" value="{myModel>/Panel/Name}" />-->
-							<Label text="Email"/>
-							<Text text="{myModel>/Panel/Email}" />
-							<Label text="Mobile No"/>
-							<Text text="{myModel>/Panel/MobileNo}" />
-							<Label text="Car Model"/>
-							<Text text="{myModel>/Panel/CarModel}" />
-							
-							<Label text="Date"/>
-							<Text text ="{myModel>/Panel/Date}"/>
-						
-							
-						</f:content>
-					</f:SimpleForm>
-			    	</VBox>
+					<masterPages >
+						<Page title="Master" backgroundDesign="Solid" showHeader="false" enableScrolling="true" floatingFooter="true">
+							<SearchField liveChange="onCustomerSearch"></SearchField>
+							<List id="idCustomerdetails" items="{path:'myModel>/Customer',sorter:{path : 'Name'}}" itemPress="item" delete="onDelete"
+								updateFinished="Updated" includeItemInSelection="true" press="">
+								<items>
+									<ObjectListItem title="{myModel>Name}" type="Active" selected="true">
+										<attributes>
+											<ObjectAttribute text="Car Model:{myModel>CarModel}"/>
+											<ObjectAttribute text="Mobile Number:{myModel>MobileNo}"/>
+										</attributes>
+									</ObjectListItem>
+								</items>
+							</List>
+							<footer>
+								<Bar></Bar>
+							</footer>
+						</Page>
+					</masterPages>
+					<detailPages>
+						<Page title="Detail" backgroundDesign="Solid" showHeader="false" enableScrolling="true" floatingFooter="true">
+							<VBox class="sapUiSmallMargin">
+								<f:SimpleForm editable="true" columnsM="2" columnsL="2" columnsXL="2" class="sapUiLargeMarginBegin">
+									<f:content>
+										<core:Title text="Customer Info."/>
+										<Label text="Name"/>
+										<Text text="{myModel>/Panel/Name}"/>
+											<Label text="Recept Number"/>
+										<Text text="{myModel>/Panel/rec}"/>
+										<!--<Input placeholder="Name" editable="{jmodel>/editable}" value="{myModel>/Panel/Name}" />-->
+										<Label text="Email"/>
+										<Text text="{myModel>/Panel/Email}"/>
+										<Label text="Mobile No"/>
+										<Text text="{myModel>/Panel/MobileNo}"/>
+										<Label text="Car Model"/>
+										<Text text="{myModel>/Panel/CarModel}"/>
+										<Label text="Date"/>
+										<Text text="{myModel>/Panel/Date}"/>
+									</f:content>
+								</f:SimpleForm>
+							</VBox>
 							<footer>
 								<Bar>
-								<!--<contentRight>-->
-								<!--		<Button xmlns="sap.m" type="Ghost" text="Edit" id="editBtn" icon="sap-icon://action" press="Edit" tooltip="edit"/>-->
-								<!--	    <Button xmlns="sap.m" type="Accept" text="Save" id="savebtn" visible="false" tooltip="Save" press="Save" icon="sap-icon://save" class="sapUiSmallMarginEnd"/>-->
-								<!--     	<Button xmlns="sap.m" type="Reject" text="Cancel" id="cancelbtn" visible="false" icon="sap-icon://cancel" press="Cancel" tooltip="Cancel"/>-->
-								<!--</contentRight>-->
-							</Bar>
-						</footer>
-					</Page>
-				</detailPages>
-			</SplitContainer>
+									<!--<contentRight>-->
+									<!--		<Button xmlns="sap.m" type="Ghost" text="Edit" id="editBtn" icon="sap-icon://action" press="Edit" tooltip="edit"/>-->
+									<!--	    <Button xmlns="sap.m" type="Accept" text="Save" id="savebtn" visible="false" tooltip="Save" press="Save" icon="sap-icon://save" class="sapUiSmallMarginEnd"/>-->
+									<!--     	<Button xmlns="sap.m" type="Reject" text="Cancel" id="cancelbtn" visible="false" icon="sap-icon://cancel" press="Cancel" tooltip="Cancel"/>-->
+									<!--</contentRight>-->
+								</Bar>
+							</footer>
+						</Page>
+					</detailPages>
+				</SplitContainer>
 			</Page>
 			<Page id="p4" title="Parts Available" floatingFooter="true" showHeader="false">
 				<content>
@@ -407,9 +325,8 @@
 					</Bar>
 				</footer>
 			</Page>
-		
-			</NavContainer>
-		</VBox>
+		</NavContainer>
+	</VBox>
 	<!--<App>-->
 	<!--	<pages>-->
 	<!--		<Page >-->

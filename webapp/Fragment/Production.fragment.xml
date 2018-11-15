@@ -1,7 +1,5 @@
-<core:FragmentDefinition
-	xmlns="sap.m"
-	xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
-		<Dialog id="idCloseDialog10" title="Request to Production" contentWidth="30%">
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+	<Dialog id="idCloseDialog10" title="Request to Production" contentWidth="30%">
 		<f:SimpleForm editable="true" columnsM="2" columnsL="2" columnsXL="2">
 			<f:content >
 				<core:Title text=""/>
@@ -15,14 +13,19 @@
 					<core:Item key="white" text="Cortina White"/>
 				</ComboBox>
 				<Label text="Delivery Date"/>
-				<DatePicker placeholder="Enter Date" dateValue = "{myModel>/todayDate}" id="date" change="handleChange"/>
+				<DatePicker placeholder="Enter Date" dateValue="{myModel>/todayDate}" id="date" change="handleChange"/>
 				<Label text="Address"/>
 				<Text id="address" text=" Bimal Auto Agency 22, 55, 3, Rajaji Nagar, Bengaluru, Karnataka 560010"/>
 			</f:content>
 		</f:SimpleForm>
-										<beginButton>
+		<beginButton>
 			<Button text="send" press="ocClosefrg"/>
 		</beginButton>
+			
+			<!--<ToolbarSpacer/>-->
+			<endButton>
+			<Button text="cancel" press="cancel1"/>
+		</endButton>
 	</Dialog>
 	<!--<SelectDialog-->
 	<!--	noDataText="No Products Found"-->
@@ -35,13 +38,11 @@
 	<!--	}"-->
 	<!--	id="list"-->
 	<!--	>-->
-		<!--<List id="list" >-->
+	<!--<List id="list" >-->
 	<!--					<items >-->
 	<!--						<ObjectListItem title="{myModel>CarName}" icon="{myModel>image}"   type="Active" >-->
-								
 	<!--						</ObjectListItem>-->
 	<!--					</items>-->
-					<!--</List>-->
-		
+	<!--</List>-->
 	<!--</SelectDialog>-->
 </core:FragmentDefinition>
